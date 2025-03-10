@@ -1,0 +1,134 @@
+/* style contents for mobile only */
+
+@media (max-width: 769px) {
+  .carop {
+    font-weight: bold !important;
+    font-size: 0.7rem !important;
+    margin: 10px;
+    margin-left: 0px !important;
+    font-family: sans-serif !important;
+  }
+  .caroh5 {
+    font-size: 1.5rem !important;
+    font-family: "Lobster Two", cursive !important;
+    font-weight: bold !important;
+    text-transform: uppercase;
+    line-height: 1 !important;
+    margin: 5px;
+    margin-left: 0px !important;
+    color: rgb(252, 250, 250);
+  }
+  .caroa {
+    color: rgb(12, 12, 12) !important;
+    background-color: green;
+    text-transform: uppercase;
+    align-content: center;
+    border-radius: 30px !important;
+    width: 120px;
+    height: 40px;
+    padding: 10px;
+    font-weight: bold !important;
+    font-size: 0.8rem !important;
+    margin: 5px;
+    font-family: sans-serif !important;
+  }
+  .caroa:hover {
+    color: rgb(252, 248, 248) !important;
+    background-color: goldenrod;
+  }
+  .dis {
+    width: 70px;
+    height: 60px;
+    margin-top: 15vh;
+    background-color: rgba(252, 250, 250, 0.2);
+  }
+  .capcaro {
+    text-align: center !important;
+    margin-bottom: 10px;
+  }
+}
+
+/* style contents for larger screens only */
+
+@media (min-width: 769px) {
+  .imgh {
+    height: 80vh !important;
+  }
+  .carop {
+    font-weight: bold !important;
+    font-size: 1.5rem !important;
+    margin: 40px;
+    margin-left: 0px !important;
+    font-family: sans-serif !important;
+  }
+  .caroh5 {
+    font-size: 4rem !important;
+    font-family: "Lobster Two", cursive !important;
+    text-transform: uppercase;
+    line-height: 1 !important;
+    margin: 30px;
+    margin-left: 0px !important;
+    color: rgb(252, 250, 250);
+  }
+  .caroa {
+    color: rgb(12, 12, 12) !important;
+    background-color: green;
+    text-transform: uppercase;
+    font-weight: bold !important;
+    font-size: 1.2rem !important;
+    align-content: center;
+    border-radius: 30px !important;
+    width: 200px;
+    height: 50px;
+    margin: 20px;
+    margin-left: 0px !important;
+    font-family: sans-serif !important;
+  }
+  .caroa:hover {
+    color: rgb(252, 248, 248) !important;
+    background-color: goldenrod;
+  }
+  .dis {
+    width: 90px;
+    height: 70px;
+    margin-top: 40vh;
+    background-color: rgba(252, 250, 250, 0.2);
+  }
+  .dis:hover {
+    width: auto;
+    background-color: green;
+  }
+  .capcaro {
+    text-align: left !important;
+    margin-bottom: 10px;
+  }
+  .img-botton {
+    display: none;
+    height: 70px;
+    width: 100px;
+  }
+  .dis:hover .img-botton {
+    display: flex;
+  }
+  .dis:hover .iconsmen {
+    margin-top: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+/* stylings that doesnt affect screens only */
+.boxy {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Black with 60% opacity */
+  z-index: 0;
+}
+.iconsmen {
+  width: 40px !important;
+  height: 40px !important;
+  color: rgb(250, 248, 248);
+}

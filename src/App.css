@@ -1,0 +1,77 @@
+.hiddenonmobile {
+  display: block;
+}
+.hiddenonlap {
+  display: block;
+}
+/* style contents for mobile only */
+
+@media (max-width: 769px) {
+  .hiddenonmobile {
+    display: none;
+  }
+  .pad {
+    padding: 10px;
+  }
+  .title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+}
+
+/* style contents for larger screens only */
+
+@media (min-width: 769px) {
+  .hiddenonlap {
+    display: none;
+  }
+  .flex-container {
+    display: flex;
+    justify-content: space-between !important;
+  }
+  .title {
+    font-size: 3rem;
+    margin-bottom: 40px;
+  }
+}
+
+/* stylings that doesnt affect screens only */
+ul li {
+  list-style-type: none;
+}
+.title {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #f3f0ee;
+}
+
+.b2top {
+  display: none;
+  position: fixed;
+  bottom: 50px; /* Distance from the bottom of the page */
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #f3f0ee;
+  color: rgb(8, 8, 8);
+  text-align: center;
+  border-radius: 50%;
+  justify-content: center;
+  font-size: 30px;
+  cursor: pointer;
+  z-index: 3546474;
+  box-shadow: 0 4px 6px rgba(8, 8, 8, 0.5);
+}
+.display-btn {
+  display: block;
+}
+.flex {
+  display: flex;
+}
+.btn {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.btn:hover {
+  color: rgb(131, 7, 247);
+}
