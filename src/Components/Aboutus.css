@@ -154,8 +154,8 @@
 
 /* stylings that doesnt affect screens only */
 .aboutus {
-  color: white !important;
-  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: rgb(14, 13, 13) !important;
+  background-color: white;
 }
 
 .av {

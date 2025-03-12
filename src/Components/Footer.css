@@ -60,12 +60,12 @@
     width: 100px;
     height: 60px;
     margin: 0 !important;
-    background-color: goldenrod;
+    background-color: green;
     font-weight: bold;
     font-size: 15px;
   }
   .input-sub2:hover {
-    background-color: rgb(33, 253, 13);
+    background-color: orangered;
   }
 }
 
