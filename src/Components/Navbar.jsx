@@ -17,7 +17,17 @@ function Navbar() {
   const closeNavbar = () => {
     setNavbarOpen(false);
   };
+  //Event listener for addiing and removing fixed class to navbar
+  window.addEventListener("scroll", function () {
+    let navbar = document.querySelector(".navbar");
+    let sticky = navbar.offsetTop;
 
+    if (window.scrollY > sticky) {
+      navbar.classList.add("fixed-nav");
+    } else {
+      navbar.classList.remove("fixed-nav");
+    }
+  });
   return (
     <nav className="navbar navbar-expand-lg navbar-warning bg">
       <div className="container-fluid d-flex justify-content-between align-items-center">
