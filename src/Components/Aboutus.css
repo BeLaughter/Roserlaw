@@ -107,7 +107,7 @@
     width: 350px; /* Adjust for big circle */
     height: 350px;
     border-radius: 50%;
-    background-color: white;
+    background-color: rgb(178, 240, 178);
     display: flex;
     justify-content: center;
     align-items: center;
