@@ -129,3 +129,6 @@ h3 {
 .facility-item:hover * {
   color: #ffffff !important;
 }
+.text-success {
+  color: rgb(33, 253, 13) !important;
+}

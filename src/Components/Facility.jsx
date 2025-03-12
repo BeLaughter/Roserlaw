@@ -15,13 +15,13 @@ const Facility = () => {
             <div class="facility-icon position-relative">
               <span class="position-absolute start-0"></span>
               <span class="position-absolute end-0"></span>
-              <BiSolidBusSchool className="fac-icon text-danger" />
+              <BiSolidBusSchool className="fac-icon text-warning" />
             </div>
 
             {/* <!-- Bottom Circle (Bigger) --> */}
             <div class="facility-text">
-              <h3>School Bus</h3>
-              <p>
+              <h3 className="text-warning">School Bus</h3>
+              <p className="text-warning">
                 {" "}
                 Eirmod sed ipsum dolor sit rebum magna erat lorem kasd vero
                 ipsum sit
@@ -35,13 +35,13 @@ const Facility = () => {
             <div class="facility-icon position-relative">
               <span class="position-absolute start-0"></span>
               <span class="position-absolute end-0"></span>
-              <PiSoccerBallFill className="fac-icon text-success" />
+              <PiSoccerBallFill className="fac-icon text-dark" />
             </div>
 
             {/* <!-- Bottom Circle (Bigger) --> */}
             <div class="facility-text">
-              <h3>Play Ground</h3>
-              <p>
+              <h3 className="text-dark">Play Ground</h3>
+              <p className="text-dark">
                 {" "}
                 Eirmod sed ipsum dolor sit rebum magna erat lorem kasd vero
                 ipsum sit
@@ -55,13 +55,13 @@ const Facility = () => {
             <div class="facility-icon position-relative">
               <span class="position-absolute start-0"></span>
               <span class="position-absolute end-0"></span>
-              <IoHomeOutline className="fac-icon text-warning" />
+              <IoHomeOutline className="fac-icon text-success" />
             </div>
 
             {/* <!-- Bottom Circle (Bigger) --> */}
             <div class="facility-text">
-              <h3>Healthy Canteen</h3>
-              <p>
+              <h3 className="text-success">Healthy Canteen</h3>
+              <p className="text-success">
                 Eirmod sed ipsum dolor sit rebum magna erat lorem kasd vero
                 ipsum sit
               </p>
@@ -79,8 +79,8 @@ const Facility = () => {
 
             {/* <!-- Bottom Circle (Bigger) --> */}
             <div class="facility-text">
-              <h3>Positive Learning</h3>
-              <p>
+              <h3 className="text-info">Positive Learning</h3>
+              <p className="text-info">
                 Eirmod sed ipsum dolor sit rebum magna erat lorem kasd vero
                 ipsum sit
               </p>
