@@ -29,7 +29,7 @@ function Navbar() {
 
         {/* Navbar Toggle Button */}
         <button
-          className="navbar-toggler"
+          className="navbar-toggler btn"
           type="button"
           onClick={toggleNavbar} // Handle navbar open/close manually
           aria-expanded={navbarOpen}
