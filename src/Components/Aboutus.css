@@ -12,6 +12,63 @@
     object-fit: cover;
     margin-right: 10px;
   }
+  .circle-container {
+    position: relative;
+    width: 100%; /* Adjust as needed */
+    height: 300px; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+  }
+
+  .circle {
+    width: 250px; /* Adjust for big circle */
+    height: 250px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: background-color 0.3s ease-in-out;
+    position: absolute;
+  }
+
+  .circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  /* Big Circle */
+  .big-circle {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    z-index: 1;
+    padding: 10px;
+  }
+
+  /* Small Circles */
+  .small-circle {
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    z-index: 2;
+  }
+
+  /* Positioning the small circles */
+  .left {
+    bottom: -20px;
+    left: -0px;
+  }
+
+  .right {
+    bottom: -20px;
+    right: -0px;
+  }
 }
 
 /* style contents for larger screens only */
@@ -36,6 +93,63 @@
     margin-left: 20px;
     margin-right: 10px;
   }
+
+  .circle-container {
+    position: relative;
+    width: 400px; /* Adjust as needed */
+    height: 400px; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .circle {
+    width: 350px; /* Adjust for big circle */
+    height: 350px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: background-color 0.3s ease-in-out;
+    position: absolute;
+  }
+
+  .circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+
+  /* Big Circle */
+  .big-circle {
+    width: 350px;
+    height: 350px;
+    position: relative;
+    z-index: 1;
+    padding: 10px;
+  }
+
+  /* Small Circles */
+  .small-circle {
+    width: 200px;
+    height: 200px;
+    padding: 10px;
+    z-index: 2;
+  }
+
+  /* Positioning the small circles */
+  .left {
+    bottom: -50px;
+    left: -70px;
+  }
+
+  .right {
+    bottom: -50px;
+    right: -70px;
+  }
 }
 
 /* stylings that doesnt affect screens only */
@@ -55,77 +169,21 @@
   font-size: 20px;
   border: 3px solid #0f0f0f;
   border-radius: 15px;
-  background-color: orangered;
+  background-color: green;
   height: 50px;
   padding: 6px 20px;
   box-shadow: 0 4px 6px rgba(8, 8, 8, 0.5);
 }
 
 .about-btn:hover {
-  background: linear-gradient(90deg, #19fc05 16%, #0bf559 50%);
+  background-color: orangered;
 }
 /* circle aboutus css */
 .flex4 {
   justify-content: space-around;
 }
-.circle-container {
-  position: relative;
-  width: 400px; /* Adjust as needed */
-  height: 400px; /* Adjust as needed */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.circle {
-  width: 350px; /* Adjust for big circle */
-  height: 350px;
-  border-radius: 50%;
-  background-color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  transition: background-color 0.3s ease-in-out;
-  position: absolute;
-}
-
-.circle img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-}
-
-/* Big Circle */
-.big-circle {
-  width: 350px;
-  height: 350px;
-  position: relative;
-  z-index: 1;
-  padding: 10px;
-}
-
-/* Small Circles */
-.small-circle {
-  width: 200px;
-  height: 200px;
-  padding: 10px;
-  z-index: 2;
-}
-
-/* Positioning the small circles */
-.left {
-  bottom: -50px;
-  left: -70px;
-}
-
-.right {
-  bottom: -50px;
-  right: -70px;
-}
 
 /* Hover effect */
 .circle:hover {
-  background-color: orange;
+  background-color: green;
 }
