@@ -21,7 +21,6 @@
 
 @media (min-width: 769px) {
   .navbar-brand {
-    margin-right: 250px;
     color: rgb(3, 150, 3);
     text-decoration: none;
     font-weight: bold;
@@ -30,7 +29,7 @@
   }
   .nav-link {
     color: rgb(3, 150, 3) !important;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: bold;
   }
 
@@ -45,11 +44,15 @@
     border-bottom-style: solid;
   }
   .navbar {
+    display: flex;
     padding-left: 100px;
     padding-right: 100px;
   }
-  .navbar-btn {
-    margin-left: 250px;
+  .navbar-nav {
+    gap: 20px;
+  }
+  .container-fluid {
+    display: flex;
   }
 }
 

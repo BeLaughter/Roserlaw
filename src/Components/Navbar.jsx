@@ -1,99 +1,134 @@
+import "bootstrap/dist/js/bootstrap.bundle.min"; // Ensure Bootstrap JS is loaded
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import { FaArrowRight, FaBookOpenReader } from "react-icons/fa6";
+
 function Navbar() {
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [navbarOpen, setNavbarOpen] = useState(false); // Track navbar open/close
 
-  // Event listener for adding and removing fixed class to navbar
-  window.addEventListener("scroll", function () {
-    let navbar = document.querySelector(".navbar");
-    let sticky = navbar.offsetTop;
+  // Toggle Navbar
+  const toggleNavbar = () => {
+    setNavbarOpen(!navbarOpen);
+  };
 
-    if (window.scrollY > sticky) {
-      navbar.classList.add("fixed-nav");
-    } else {
-      navbar.classList.remove("fixed-nav");
-    }
-  });
+  // Close Navbar when clicking a link
+  const closeNavbar = () => {
+    setNavbarOpen(false);
+  };
 
   return (
     <nav className="navbar navbar-expand-lg navbar-warning bg">
-      <div className="container-fluid">
-        <h1 className="navbar-brand">
+      <div className="container-fluid d-flex justify-content-between align-items-center">
+        {/* Brand */}
+        <h1 className="navbar-brand me-auto">
           <FaBookOpenReader className="bk-icon" />
           Roserlaw
         </h1>
+
+        {/* Navbar Toggle Button */}
         <button
-          className="navbar-toggler bg hiddenonlap"
+          className="navbar-toggler"
           type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
+          onClick={toggleNavbar} // Handle navbar open/close manually
+          aria-expanded={navbarOpen}
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="navbar-nav">
-            <Link to="/" className="nav-link active" aria-current="page">
-              <li className="nav-item">Home</li>
-            </Link>
-            <Link to="/about" className="nav-link">
-              <li className="nav-item">About Us</li>
-            </Link>
-            <Link to="/class" className="nav-link">
-              <li className="nav-item">Classes</li>
-            </Link>
-            <li
-              className="nav-item dropdown"
-              onMouseEnter={() => setDropdownOpen(true)}
-              onMouseLeave={() => setDropdownOpen(false)}
-            >
-              <Link to="/page" className="nav-link dropdown-toggle">
+
+        {/* Navbar Items */}
+        <div className={`collapse navbar-collapse ${navbarOpen ? "show" : ""}`}>
+          <ul className="navbar-nav mx-auto">
+            <li className="nav-item">
+              <Link to="/" className="nav-link active" onClick={closeNavbar}>
+                Home
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/about" className="nav-link" onClick={closeNavbar}>
+                About Us
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/class" className="nav-link" onClick={closeNavbar}>
+                Classes
+              </Link>
+            </li>
+
+            {/* Dropdown Menu */}
+            <li className="nav-item dropdown">
+              <Link
+                to="#"
+                className="nav-link dropdown-toggle"
+                onClick={() => setDropdownOpen(!dropdownOpen)}
+              >
                 Pages
               </Link>
               {dropdownOpen && (
                 <ul className="dropdown-menu show">
                   <li>
-                    <Link to="/page/1" className="dropdown-item">
-                      1
-                    </Link>
+                    <a
+                      href="/page/1"
+                      className="dropdown-item"
+                      onClick={closeNavbar}
+                    >
+                      School Facilities
+                    </a>
                   </li>
                   <li>
-                    <Link to="/page/2" className="dropdown-item">
-                      2
-                    </Link>
+                    <a
+                      href="/page/2"
+                      className="dropdown-item"
+                      onClick={closeNavbar}
+                    >
+                      Popular Teachers
+                    </a>
                   </li>
                   <li>
-                    <Link to="/page/3" className="dropdown-item">
-                      3
-                    </Link>
+                    <a
+                      href="/page/3"
+                      className="dropdown-item"
+                      onClick={closeNavbar}
+                    >
+                      Become A Teacher
+                    </a>
                   </li>
                   <li>
-                    <Link to="/page/4" className="dropdown-item">
-                      4
-                    </Link>
+                    <a
+                      href="/page/4"
+                      className="dropdown-item"
+                      onClick={closeNavbar}
+                    >
+                      Make Appointment
+                    </a>
                   </li>
                   <li>
-                    <Link to="/page/5" className="dropdown-item">
-                      5
-                    </Link>
+                    <a
+                      href="/page/5"
+                      className="dropdown-item"
+                      onClick={closeNavbar}
+                    >
+                      Testimonial
+                    </a>
                   </li>
                 </ul>
               )}
             </li>
-            <Link to="/contact" className="nav-link">
-              <li className="nav-item">Contact Us</li>
-            </Link>
+
             <li className="nav-item">
-              <a className="btn hiddenonmobile navbar-btn">
-                Join Us <FaArrowRight className="icon" />{" "}
-              </a>
+              <Link to="/contact" className="nav-link" onClick={closeNavbar}>
+                Contact Us
+              </Link>
             </li>
           </ul>
         </div>
+
+        {/* Join Us Button */}
+        <a className="btn hiddenonmobile navbar-btn ms-auto">
+          Join Us <FaArrowRight className="icon" />
+        </a>
       </div>
     </nav>
   );

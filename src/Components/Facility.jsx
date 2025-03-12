@@ -9,13 +9,13 @@ const Facility = () => {
     <div className="facility">
       <h2 className="text-center title">School Facilities</h2>
       <div className="flex-container">
-        <div className="item1">
+        <div className="item">
           <div class="facility-item">
             {/* <!-- Top Circle (Smaller) --> */}
             <div class="facility-icon position-relative">
               <span class="position-absolute start-0"></span>
               <span class="position-absolute end-0"></span>
-              <BiSolidBusSchool className="fac-icon" />
+              <BiSolidBusSchool className="fac-icon text-danger" />
             </div>
 
             {/* <!-- Bottom Circle (Bigger) --> */}
@@ -29,13 +29,13 @@ const Facility = () => {
             </div>
           </div>
         </div>
-        <div className="item2">
+        <div className="item">
           <div class="facility-item">
             {/* <!-- Top Circle (Smaller) --> */}
             <div class="facility-icon position-relative">
               <span class="position-absolute start-0"></span>
               <span class="position-absolute end-0"></span>
-              <PiSoccerBallFill className="fac-icon" />
+              <PiSoccerBallFill className="fac-icon text-success" />
             </div>
 
             {/* <!-- Bottom Circle (Bigger) --> */}
@@ -49,13 +49,13 @@ const Facility = () => {
             </div>
           </div>
         </div>
-        <div className="item3">
+        <div className="item">
           <div class="facility-item">
             {/* <!-- Top Circle (Smaller) --> */}
             <div class="facility-icon position-relative">
               <span class="position-absolute start-0"></span>
               <span class="position-absolute end-0"></span>
-              <IoHomeOutline className="fac-icon" />
+              <IoHomeOutline className="fac-icon text-warning" />
             </div>
 
             {/* <!-- Bottom Circle (Bigger) --> */}
@@ -68,13 +68,13 @@ const Facility = () => {
             </div>
           </div>
         </div>
-        <div className="item3">
+        <div className="item">
           <div class="facility-item">
             {/* <!-- Top Circle (Smaller) --> */}
             <div class="facility-icon position-relative">
               <span class="position-absolute start-0"></span>
               <span class="position-absolute end-0"></span>
-              <BsPersonWorkspace className="fac-icon" />
+              <BsPersonWorkspace className="fac-icon text-info" />
             </div>
 
             {/* <!-- Bottom Circle (Bigger) --> */}
