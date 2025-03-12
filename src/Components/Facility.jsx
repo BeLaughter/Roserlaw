@@ -21,7 +21,7 @@ const Facility = () => {
             {/* <!-- Bottom Circle (Bigger) --> */}
             <div class="facility-text">
               <h3 className="text-warning">School Bus</h3>
-              <p className="text-warning">
+              <p>
                 {" "}
                 Eirmod sed ipsum dolor sit rebum magna erat lorem kasd vero
                 ipsum sit
@@ -41,7 +41,7 @@ const Facility = () => {
             {/* <!-- Bottom Circle (Bigger) --> */}
             <div class="facility-text">
               <h3 className="text-dark">Play Ground</h3>
-              <p className="text-dark">
+              <p>
                 {" "}
                 Eirmod sed ipsum dolor sit rebum magna erat lorem kasd vero
                 ipsum sit
@@ -61,7 +61,7 @@ const Facility = () => {
             {/* <!-- Bottom Circle (Bigger) --> */}
             <div class="facility-text">
               <h3 className="text-success">Healthy Canteen</h3>
-              <p className="text-success">
+              <p>
                 Eirmod sed ipsum dolor sit rebum magna erat lorem kasd vero
                 ipsum sit
               </p>
@@ -80,7 +80,7 @@ const Facility = () => {
             {/* <!-- Bottom Circle (Bigger) --> */}
             <div class="facility-text">
               <h3 className="text-info">Positive Learning</h3>
-              <p className="text-info">
+              <p>
                 Eirmod sed ipsum dolor sit rebum magna erat lorem kasd vero
                 ipsum sit
               </p>
