@@ -1,14 +1,16 @@
 import React from "react";
 import "./Testi.css";
+import { FaQuoteLeft } from "react-icons/fa";
 const Testicard = (props) => {
   return (
     <div className="testicard">
-      <p>{props.testimony}</p>
+      <FaQuoteLeft className="icons" />
+      <p className="ptest">"{props.testimony}"</p>
       <div className="flex">
-        <img src={props.image} alt="Testimonial Image" />
+        <img src={props.img} alt="Testimonial Image" className="parent-img" />
         <div className="flex-column">
-          <p>{props.name}</p>
-          <p>{props.occupation}</p>
+          <p>PARENT: {props.name}</p>
+          <p>OCCUPATION: {props.occupation}</p>
         </div>
       </div>
     </div>

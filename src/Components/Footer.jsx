@@ -62,7 +62,36 @@ function Footer() {
         </div>
         <div className="flex-item">
           <h4>Photo Gallery</h4>
-          <ul></ul>
+          <ul>
+            <li>
+              <div className="flen">
+                <img
+                  src="https://cdn.pixabay.com/photo/2021/03/08/20/14/child-6080185_640.jpg"
+                  alt="Testimonial Image"
+                  className="gallery-img"
+                />
+                <img
+                  src="https://cdn.pixabay.com/photo/2023/03/16/16/20/little-girl-7857049_640.jpg"
+                  alt="Testimonial Image"
+                  className="gallery-img"
+                />
+              </div>
+            </li>
+            <li>
+              <div className="flen">
+                <img
+                  src="https://cdn.pixabay.com/photo/2014/04/05/11/39/read-316507_640.jpg"
+                  alt="Testimonial Image"
+                  className="gallery-img"
+                />
+                <img
+                  src="https://cdn.pixabay.com/photo/2019/08/08/14/46/indian-holiday-4393133_640.jpg"
+                  alt="Testimonial Image"
+                  className="gallery-img"
+                />
+              </div>
+            </li>
+          </ul>
         </div>
         <div className="flex-item">
           <h4>Newsletter</h4>

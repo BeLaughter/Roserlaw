@@ -1,5 +1,5 @@
 /* style contents for mobile only */
-@import url("https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Lobster+Two&display=swap"); */
 @media (max-width: 769px) {
   .navbar-brand {
     margin-left: 20px;

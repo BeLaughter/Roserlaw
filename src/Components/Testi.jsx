@@ -34,79 +34,80 @@ const Testi = () => {
 
       <div className="swiper-container">
         <Swiper
-          loop={true} // Enables infinite loop
-          spaceBetween={50} // Increase space between slides
-          centeredSlides={true}
+          loop={true}
+          spaceBetween={30} // Increase space to prevent slides from being too close
+          centeredSlides={false} // Ensure slides align properly
           autoplay={{
-            delay: 3000, // Auto-slide every 3 sec
+            delay: 3000,
             disableOnInteraction: false,
           }}
           pagination={{
             clickable: true,
           }}
-          navigation={true} // Enable next/prev buttons
-          effect="coverflow" // Enable the Coverflow effect
+          navigation={true}
+          effect="coverflow"
           coverflowEffect={{
-            rotate: 0, // No rotation
-            stretch: 0, // No stretching
-            depth: 50, // Less depth to prevent overlap
-            modifier: 1.3, // Scale effect (1.3x for center slide)
-            slideShadows: false, // Optional: Remove shadow effect
+            rotate: 0,
+            stretch: 0,
+            depth: 50,
+            modifier: 1.3,
+            slideShadows: false,
           }}
           modules={[Pagination, Navigation, Autoplay, EffectCoverflow]}
           breakpoints={{
             320: {
-              slidesPerView: 1, // Show 1 slide on small screens
+              slidesPerView: 1, // Show 1 slide on mobile
               centeredSlides: true,
-              autoplay: false, // Disable auto-slide on mobile
+              autoplay: false, // Disable autoplay on mobile
             },
             768: {
               slidesPerView: 2, // Show 2 slides on tablets
             },
             1024: {
-              slidesPerView: 2, // Show 4 slides on large screens
+              slidesPerView: 2, // Show 2 slides on large screens
+              spaceBetween: 50, // Increase spacing to avoid left/right button overlap
             },
           }}
           className="mySwiper"
         >
           <SwiperSlide>
             <Testicard
-              img="#"
-              testimony="Consta"
-              name="By Lupita Gomez1"
-              occupation="39K"
+              img="https://cdn.pixabay.com/photo/2017/04/21/03/13/paternity-2247485_640.jpg"
+              testimony="We love the warm and nurturing environment at Roserlaw. From the first day, our child felt welcomed and supported. The school's commitment to academic excellence and extracurricular activities has given our child a well-rounded education. We couldn't be happier!"
+              name="Mr Bolatito"
+              occupation="Auditor"
             />
           </SwiperSlide>
           <SwiperSlide>
             <Testicard
-              img="#"
-              testimony="Consta"
-              name="By Lupita Gomez2"
-              occupation="39K"
+              img="https://cdn.pixabay.com/photo/2014/11/19/22/36/woman-538396_640.jpg"
+              testimony="What I love most about Roserlaw is their focus on holistic education. From academics to sports, arts, and leadership programs, my child is constantly learning and growing."
+              name="Mrs Awoyemi"
+              occupation="Nutritionist"
             />
           </SwiperSlide>
           <SwiperSlide>
             <Testicard
-              img="#"
-              testimony="Consta"
-              name="By Lupita Gomez3"
-              occupation="39K"
+              img="https://cdn.pixabay.com/photo/2015/06/26/13/49/father-822550_640.jpg"
+              testimony="As a parent, knowing my child is in a safe, friendly, and disciplined environment gives me peace of mind. The school's commitment to excellence is evident in my child's progress and happiness!"
+              name="Mr Thompson"
+              occupation="Banker"
             />
           </SwiperSlide>
           <SwiperSlide>
             <Testicard
-              img="#"
-              testimony="Consta"
-              name="By Lupita Gomez4"
-              occupation="39K"
+              img="https://cdn.pixabay.com/photo/2016/09/03/09/18/girl-1641215_640.jpg"
+              testimony="Enrolling my child at Roserlaw was the best decision we ever made! The teachers are incredibly dedicated, and the school provides a nurturing environment where students thrive academically and socially."
+              name="Mr Adeleke"
+              occupation="Bussiness Manager"
             />
           </SwiperSlide>
           <SwiperSlide>
             <Testicard
-              img="#"
-              testimony="Consta"
-              name="By Lupita Gomez5"
-              occupation="39K"
+              img="https://cdn.pixabay.com/photo/2024/09/16/04/14/family-9050396_640.jpg"
+              testimony="The educators at Roserlaw truly care about every child's growth. They go above and beyond to ensure students not only excel in academics but also develop confidence and strong character."
+              name="Mr and Mrs Ahmed"
+              occupation="Traders"
             />
           </SwiperSlide>
         </Swiper>

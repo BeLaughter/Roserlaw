@@ -28,7 +28,7 @@ function Body() {
               data-aos="zoom-out-left"
               data-aos-duration="1500"
             >
-              Make A Brighter Future For Your Child<br></br> Your Child
+              Start A Brighter Future<br></br> Your Child
             </p>
             <div className="flex">
               <a className="btn caroa" href="#">
@@ -52,8 +52,8 @@ function Body() {
               The Best Kindergarten School<br></br>For Your Child
             </h5>
             <p className="carop">
-              Experience the taste of a perfect Learning at <br></br>Roserlaw,
-              one of the best schools!
+              Experience perfect Learning at <br></br>Roserlaw, one of the best
+              schools!
             </p>
             <div className="flex">
               <a className="btn caroa" href="#">
