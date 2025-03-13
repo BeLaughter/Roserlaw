@@ -28,7 +28,7 @@ function Body() {
               data-aos="zoom-out-left"
               data-aos-duration="1500"
             >
-              Start A Brighter Future<br></br> Your Child
+              Start A Brighter Future<br></br>For Your Child
             </p>
             <div className="flex">
               <a className="btn caroa" href="#">
