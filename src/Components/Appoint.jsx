@@ -7,7 +7,12 @@ const Appoint = () => {
         <h2 className="title text-dark">Make Appointment</h2>
         <div className="flex-container">
           <input type="text" placeholder="Guardian Name" className="input1" />
-          <input type="email" placeholder="Guardian Email" className="input2" />
+          <input
+            type="email"
+            name="email"
+            placeholder="Guardian Email"
+            className="input2"
+          />
         </div>
         <div className="flex-container">
           <input type="text" placeholder="Child Name" className="input3" />
@@ -15,7 +20,9 @@ const Appoint = () => {
         </div>
         <input type="text" placeholder="Message" className="input5" />
 
-        <a className="btn teach-btn ">Submit</a>
+        <button type="submit" className=" btn teach-btn">
+          Submit
+        </button>
       </div>
       <div className="flex2">
         <div className="image-text-container">

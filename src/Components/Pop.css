@@ -1,0 +1,148 @@
+/* style contents for mobile only */
+
+@media (max-width: 769px) {
+  .pop {
+    padding: 20px;
+  }
+}
+
+/* style contents for larger screens only */
+
+@media (min-width: 769px) {
+  .pop {
+    padding-top: 50px !important;
+  }
+  .flex-con {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+  }
+}
+
+/* stylings that doesnt affect screens only */
+
+.pop {
+  color: rgb(14, 13, 13) !important;
+  background-color: white;
+}
+
+/* Container */
+.oval {
+  display: flex;
+  padding: 5vw;
+  height: 50vh;
+  margin: 15vh 0;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Large Circle */
+.big-cir {
+  position: relative;
+  width: 20vw;
+  height: 75vh;
+  border-radius: 50%;
+  padding: 10px;
+  background-color: rgb(133, 197, 133);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Hover Effect */
+.big-cir:hover {
+  background-color: green;
+}
+
+.big-cir:hover .small-cir {
+  color: white !important;
+  background-color: green !important;
+}
+
+/* Image inside Big Circle */
+.bigc-img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Small Circle */
+.small-cir {
+  display: flex; /* Fixes collapse issue */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  bottom: -0%;
+  right: -40%;
+  background-color: rgb(133, 197, 133);
+  border: 2px solid black;
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%;
+  overflow: hidden; /* Keeps content inside */
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+/* Icons inside Small Circle */
+.small-cir .icons {
+  color: white;
+  font-size: 1.2vw;
+  margin: 5px;
+}
+
+/* Small Circle Hover */
+.small-cir:hover {
+  background-color: green !important;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .oval {
+    padding: 5vw;
+    height: 40vh;
+  }
+
+  .big-cir {
+    width: 30vw;
+    height: 45vh;
+  }
+
+  .small-cir {
+    width: 12vw;
+    height: 12vw;
+    bottom: -30%;
+    right: -10%;
+  }
+
+  .small-cir .icons {
+    font-size: 2vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .oval {
+    padding: 2vw;
+    height: 30vh;
+    margin: 30vh 0;
+  }
+
+  .big-cir {
+    width: 75vw;
+    height: 55vh;
+  }
+
+  .small-cir {
+    width: 45vw;
+    height: 45vw;
+    bottom: 50px;
+    right: -15%;
+  }
+
+  .small-cir .icons {
+    font-size: 1rem !important;
+  }
+}
