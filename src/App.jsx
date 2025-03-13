@@ -25,16 +25,16 @@ function App() {
     });
   };
   //add/remove display class to btn when screen is scrolled to half vheight
-  window.addEventListener("scroll", function () {
-    let btntop = document.querySelector(".b2top");
-    let scrollThreshold = btntop.offsetTop + window.innerHeight / 2; // 50vh below  position
+  // window.addEventListener("scroll", function () {
+  //   let btntop = document.querySelector(".b2top");
+  //   let scrollThreshold = btntop.offsetTop + window.innerHeight / 2; // 50vh below  position
 
-    if (window.scrollY > scrollThreshold) {
-      btntop.classList.add("display-btn");
-    } else {
-      btntop.classList.remove("display-btn");
-    }
-  });
+  //   if (window.scrollY > scrollThreshold) {
+  //     btntop.classList.add("display-btn");
+  //   } else {
+  //     btntop.classList.remove("display-btn");
+  //   }
+  // });
   return (
     <div>
       <div className="b2top">

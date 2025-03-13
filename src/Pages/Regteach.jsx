@@ -43,6 +43,7 @@ const Regteach = () => {
     <div className="regteach">
       <h2 className="title text-center text-dark">Register as a Teacher</h2>
       <form onSubmit={handleSubmit}>
+        <label for="subject">Full Name:</label>
         <input
           type="text"
           name="name"
@@ -52,6 +53,7 @@ const Regteach = () => {
           onChange={handleChange}
           required
         />
+        <label for="subject">Email:</label>
         <input
           type="email"
           name="email"
@@ -61,24 +63,25 @@ const Regteach = () => {
           onChange={handleChange}
           required
         />
+        <label for="subject">Subject of Expertise:</label>
+        <select id="subject" name="subject" className="input-reg" required>
+          <option value="math">Mathematics</option>
+          <option value="science">Science</option>
+          <option value="english">English</option>
+          <option value="history">History</option>
+          <option value="other">Other</option>
+        </select>
+
+        <label for="experience">Years of Experience:</label>
         <input
-          type="text"
-          name="subject"
-          placeholder="Subject"
+          type="number"
+          id="experience"
+          name="experience"
           className="input-reg"
-          value={teacher.subject}
-          onChange={handleChange}
+          min="0"
           required
-        />
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          className="input-reg"
-          value={teacher.password}
-          onChange={handleChange}
-          required
-        />
+        ></input>
+
         <button type="submit" className=" btn teach-btn">
           Register
         </button>

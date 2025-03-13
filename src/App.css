@@ -55,7 +55,7 @@ ul li {
 }
 
 .b2top {
-  display: none;
+  /* display: none; */
   position: fixed;
   bottom: 50px; /* Distance from the bottom of the page */
   right: 20px;
@@ -90,5 +90,6 @@ ul li {
 .input-reg {
   width: 100%;
   height: 50px;
+  border-radius: 15px;
   outline: 2px solid rgb(178, 238, 178);
 }
