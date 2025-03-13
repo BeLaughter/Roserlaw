@@ -5,6 +5,7 @@ import Aboutus from "../Components/Aboutus";
 import Teach from "../Components/Teach";
 import Appoint from "../Components/Appoint";
 import Pop from "../Components/Pop";
+import Testi from "../Components/Testi";
 const Home = () => {
   return (
     <div>
@@ -14,6 +15,7 @@ const Home = () => {
       <Teach />
       <Appoint />
       <Pop />
+      <Testi />
     </div>
   );
 };

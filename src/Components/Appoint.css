@@ -85,7 +85,7 @@
 input {
   margin-top: 10px;
   margin-bottom: 10px;
-  border-color: rgb(248, 241, 229); /* Change border color while typing */
+  border: 2px solid rgb(36, 35, 35); /* Change border color while typing */
 }
 input:focus {
   outline: 3px solid green;

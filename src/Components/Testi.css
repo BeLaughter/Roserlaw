@@ -1,0 +1,33 @@
+/* style contents for mobile only */
+
+@media (max-width: 769px) {
+  .testi {
+    padding: 20px;
+  }
+}
+
+/* style contents for larger screens only */
+
+@media (min-width: 769px) {
+  .testi {
+    padding-top: 50px !important;
+    padding: 100px;
+  }
+}
+
+/* stylings that doesnt affect screens only */
+.testi {
+  color: rgb(14, 13, 13) !important;
+  background-color: white;
+}
+.testicard {
+  margin-top: 50px;
+  width: 400px;
+  background-color: green;
+  background: rgba(5, 233, 5, 0.6); /* Semi-transparent green */
+  backdrop-filter: blur(10px); /* Blur effect for the glassy look */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  padding: 20px;
+  border-radius: 10px; /* Smooth rounded edges */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+}

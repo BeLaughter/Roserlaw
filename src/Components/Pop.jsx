@@ -41,11 +41,11 @@ const Pop = () => {
           <div className="big-cir">
             <img
               className="bigc-img"
-              src="https://cdn.pixabay.com/photo/2023/12/15/17/13/woman-8451051_640.jpg"
+              src="https://cdn.pixabay.com/photo/2016/03/02/10/37/allrounder-1232063_640.jpg"
               alt="Teacher"
             />
             <div className="small-cir">
-              <h3 className="text-dark ">Mr Dapo</h3>
+              <h3 className="text-dark ">Mr Daniel</h3>
               <span className="flex">
                 <a href="#" target="blank">
                   <FaInstagram className="icons" />
@@ -66,7 +66,7 @@ const Pop = () => {
           <div className="big-cir">
             <img
               className="bigc-img"
-              src="https://cdn.pixabay.com/photo/2023/12/15/17/13/woman-8451051_640.jpg"
+              src="https://cdn.pixabay.com/photo/2022/08/11/08/08/student-7378905_640.jpg"
               alt="Teacher"
             />
             <div className="small-cir">
