@@ -10,6 +10,7 @@ import Class from "./Pages/Class";
 import Page from "./Pages/Page";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
+import Regteach from "./Pages/Regteach";
 
 function App() {
   // Initialize AOS
@@ -48,6 +49,7 @@ function App() {
         <Route exact path="/class" element={<Class />} />
         <Route exact path="/page" element={<Page />} />
         <Route exact path="/contact" element={<Contact />} />
+        <Route exact path="/regteach" element={<Regteach />} />
       </Routes>
       <Footer />
     </div>

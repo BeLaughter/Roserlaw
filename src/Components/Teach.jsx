@@ -1,7 +1,7 @@
 import React from "react";
 import "./Teach.css";
 import { FaArrowRight } from "react-icons/fa6";
-
+import { Link } from "react-router-dom";
 const Teach = () => {
   return (
     <div className="teach">
@@ -18,13 +18,19 @@ const Teach = () => {
         <div className="flex2">
           <h2 className="title text-dark">Become A Teacher</h2>
           <p>
-            Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu
-            diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet
-            lorem sit clita duo justo magna dolore erat amet
+            Are you passionate about shaping young minds and making a difference
+            in the world of education? At Roserlaw, we are always looking for
+            dedicated and inspiring teachers who are committed to fostering a
+            love for learning.<br></br>Join us and be a part of a team that
+            empowers students to reach their full potential. If you have the
+            skills, passion, and dedication to educate and inspire, we would
+            love to hear from you!
           </p>
-          <a className="btn teach-btn ">
-            Get Started Now <FaArrowRight className="icon" />
-          </a>
+          <Link to="/regteach">
+            <a className="btn teach-btn ">
+              Get Started Now <FaArrowRight className="icon" />
+            </a>
+          </Link>
         </div>
       </div>
     </div>
