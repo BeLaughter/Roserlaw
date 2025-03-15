@@ -333,7 +333,7 @@ const Pop = () => {
           className="btn toggle-btn navbar-btn"
           onClick={() => setShowMore(!showMore)}
         >
-          {showMore ? "View Less Teachers" : "View More Teachers"}
+          {showMore ? "View Less Teachers" : "View All Teachers"}
         </button>
       </div>
     </div>
