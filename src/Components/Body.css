@@ -46,6 +46,9 @@
     text-align: center !important;
     margin-bottom: 10px;
   }
+  .imgh {
+    height: 35vh !important;
+  }
 }
 
 /* style contents for larger screens only */
