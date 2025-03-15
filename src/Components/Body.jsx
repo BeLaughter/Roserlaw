@@ -9,8 +9,8 @@ function Body() {
       data-bs-ride="carousel"
     >
       <div className="carousel-inner">
-        <div className="carousel-item imgh active">
-          <img src={body2} className=" w-100 " alt="Image 1"></img>
+        <div className="carousel-item  active">
+          <img src={body2} className="d-block w-100 imgh " alt="Image 1"></img>
           <div className="boxy"></div>
           <div className="carousel-caption capcaro">
             <h5
@@ -37,10 +37,10 @@ function Body() {
             </div>
           </div>
         </div>
-        <div className="carousel-item imgh">
+        <div className="carousel-item ">
           <img
             src="https://cdn.pixabay.com/photo/2024/01/04/14/27/write-8487618_640.jpg"
-            className=" w-100"
+            className="d-block w-100 imgh"
             alt="Image 2"
           ></img>
           <div className="boxy"></div>
