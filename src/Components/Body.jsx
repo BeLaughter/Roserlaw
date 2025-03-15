@@ -10,7 +10,7 @@ function Body() {
     >
       <div className="carousel-inner">
         <div className="carousel-item imgh active">
-          <img src={body2} className="d-block w-100 " alt="Image 1"></img>
+          <img src={body2} className=" w-100 " alt="Image 1"></img>
           <div className="boxy"></div>
           <div className="carousel-caption capcaro">
             <h5
@@ -40,7 +40,7 @@ function Body() {
         <div className="carousel-item imgh">
           <img
             src="https://cdn.pixabay.com/photo/2024/01/04/14/27/write-8487618_640.jpg"
-            className="d-block w-100"
+            className=" w-100"
             alt="Image 2"
           ></img>
           <div className="boxy"></div>
