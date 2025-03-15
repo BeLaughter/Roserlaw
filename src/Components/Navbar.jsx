@@ -136,9 +136,9 @@ function Navbar() {
         </div>
 
         {/* Join Us Button */}
-        <a className="btn hiddenonmobile navbar-btn ms-auto">
+        <Link to="/contact" className="btn hiddenonmobile navbar-btn ms-auto">
           Join Us <FaArrowRight className="icon" />
-        </a>
+        </Link>
       </div>
     </nav>
   );

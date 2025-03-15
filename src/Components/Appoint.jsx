@@ -106,15 +106,14 @@ const Appoint = () => {
               required
             />
           </div>
-          <input
-            type="text"
+          <textarea
             name="message"
-            placeholder="Message"
+            placeholder="Your Message"
             className="input5"
             value={appointment.message}
             onChange={handleChange}
             required
-          />
+          ></textarea>
 
           <button type="submit" className="btn teach-btn">
             Submit

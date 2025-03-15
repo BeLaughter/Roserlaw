@@ -1,0 +1,32 @@
+/* style contents for mobile only */
+
+@media (max-width: 769px) {
+  .contact {
+    padding: 20px;
+  }
+}
+
+/* style contents for larger screens only */
+
+@media (min-width: 769px) {
+  .contact {
+    padding-top: 50px !important;
+    padding: 100px;
+  }
+  .flexc {
+    display: flex;
+    justify-content: space-between;
+    justify-content: space-around;
+  }
+}
+
+/* stylings that doesnt affect screens only */
+.contact {
+  color: rgb(14, 13, 13) !important;
+  background-color: white;
+}
+
+.text-bold {
+  font-weight: bold;
+  font-size: 18px;
+}
