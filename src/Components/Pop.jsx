@@ -103,6 +103,17 @@ const Pop = () => {
                 <div className="small-cir">
                   <h3 className="text-dark">Mr Samson</h3>
                   <h4 className="text-dark">Senior Teacher</h4>
+                  <span className="flex">
+                    <a href="#" target="_blank">
+                      <FaInstagram className="icons" />
+                    </a>
+                    <a href="#" target="_blank">
+                      <FaWhatsapp className="icons" />
+                    </a>
+                    <a href="#" target="_blank">
+                      <FaLinkedin className="icons" />
+                    </a>
+                  </span>
                 </div>
               </div>
             </div>
@@ -117,6 +128,17 @@ const Pop = () => {
                 <div className="small-cir">
                   <h3 className="text-dark">Mr Williams</h3>
                   <h4 className="text-dark">Science Teacher</h4>
+                  <span className="flex">
+                    <a href="#" target="_blank">
+                      <FaInstagram className="icons" />
+                    </a>
+                    <a href="#" target="_blank">
+                      <FaWhatsapp className="icons" />
+                    </a>
+                    <a href="#" target="_blank">
+                      <FaLinkedin className="icons" />
+                    </a>
+                  </span>
                 </div>
               </div>
             </div>
@@ -131,6 +153,17 @@ const Pop = () => {
                 <div className="small-cir">
                   <h3 className="text-dark">Ms Bello</h3>
                   <h4 className="text-dark">English Teacher</h4>
+                  <span className="flex">
+                    <a href="#" target="_blank">
+                      <FaInstagram className="icons" />
+                    </a>
+                    <a href="#" target="_blank">
+                      <FaWhatsapp className="icons" />
+                    </a>
+                    <a href="#" target="_blank">
+                      <FaLinkedin className="icons" />
+                    </a>
+                  </span>
                 </div>
               </div>
             </div>
@@ -148,6 +181,17 @@ const Pop = () => {
                 <div className="small-cir">
                   <h3 className="text-dark">Ms Adebayo</h3>
                   <h4 className="text-dark">Math Teacher</h4>
+                  <span className="flex">
+                    <a href="#" target="_blank">
+                      <FaInstagram className="icons" />
+                    </a>
+                    <a href="#" target="_blank">
+                      <FaWhatsapp className="icons" />
+                    </a>
+                    <a href="#" target="_blank">
+                      <FaLinkedin className="icons" />
+                    </a>
+                  </span>
                 </div>
               </div>
             </div>
@@ -162,6 +206,17 @@ const Pop = () => {
                 <div className="small-cir">
                   <h3 className="text-dark">Mr Kelvin</h3>
                   <h4 className="text-dark">History Teacher</h4>
+                  <span className="flex">
+                    <a href="#" target="_blank">
+                      <FaInstagram className="icons" />
+                    </a>
+                    <a href="#" target="_blank">
+                      <FaWhatsapp className="icons" />
+                    </a>
+                    <a href="#" target="_blank">
+                      <FaLinkedin className="icons" />
+                    </a>
+                  </span>
                 </div>
               </div>
             </div>
@@ -176,6 +231,17 @@ const Pop = () => {
                 <div className="small-cir">
                   <h3 className="text-dark">Mrs Joyce</h3>
                   <h4 className="text-dark">Geography Teacher</h4>
+                  <span className="flex">
+                    <a href="#" target="_blank">
+                      <FaInstagram className="icons" />
+                    </a>
+                    <a href="#" target="_blank">
+                      <FaWhatsapp className="icons" />
+                    </a>
+                    <a href="#" target="_blank">
+                      <FaLinkedin className="icons" />
+                    </a>
+                  </span>
                 </div>
               </div>
             </div>
@@ -193,6 +259,17 @@ const Pop = () => {
                 <div className="small-cir">
                   <h3 className="text-dark">Mrs Esther</h3>
                   <h4 className="text-dark">Biology Teacher</h4>
+                  <span className="flex">
+                    <a href="#" target="_blank">
+                      <FaInstagram className="icons" />
+                    </a>
+                    <a href="#" target="_blank">
+                      <FaWhatsapp className="icons" />
+                    </a>
+                    <a href="#" target="_blank">
+                      <FaLinkedin className="icons" />
+                    </a>
+                  </span>
                 </div>
               </div>
             </div>
@@ -207,6 +284,17 @@ const Pop = () => {
                 <div className="small-cir">
                   <h3 className="text-dark">Mr Okafor</h3>
                   <h4 className="text-dark">Physics Teacher</h4>
+                  <span className="flex">
+                    <a href="#" target="_blank">
+                      <FaInstagram className="icons" />
+                    </a>
+                    <a href="#" target="_blank">
+                      <FaWhatsapp className="icons" />
+                    </a>
+                    <a href="#" target="_blank">
+                      <FaLinkedin className="icons" />
+                    </a>
+                  </span>
                 </div>
               </div>
             </div>
@@ -221,6 +309,17 @@ const Pop = () => {
                 <div className="small-cir">
                   <h3 className="text-dark">Mr Ahmed</h3>
                   <h4 className="text-dark">Chemistry Teacher</h4>
+                  <span className="flex">
+                    <a href="#" target="_blank">
+                      <FaInstagram className="icons" />
+                    </a>
+                    <a href="#" target="_blank">
+                      <FaWhatsapp className="icons" />
+                    </a>
+                    <a href="#" target="_blank">
+                      <FaLinkedin className="icons" />
+                    </a>
+                  </span>
                 </div>
               </div>
             </div>
