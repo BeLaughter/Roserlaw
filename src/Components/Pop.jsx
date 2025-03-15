@@ -18,7 +18,7 @@ const Pop = () => {
           <div className="big-cir">
             <img className="bigc-img" src={teacher1} alt="Teacher" />
             <div className="small-cir">
-              <h3 className="text-dark ">Mrs Lawal</h3>
+              <h3 className="text-dark ">Miss Lawal</h3>
               <h4 className="text-dark">Teacher</h4>
               <span className="flex">
                 <a href="#" target="blank">
