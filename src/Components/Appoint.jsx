@@ -7,6 +7,8 @@ const Appoint = () => {
   const [appointment, setAppointment] = useState({
     guardianName: "",
     guardianEmail: "",
+    guardianPhone: "",
+    guardianSecondPhone: "",
     childName: "",
     childAge: "",
     message: "",
@@ -28,6 +30,8 @@ const Appoint = () => {
       setAppointment({
         guardianName: "",
         guardianEmail: "",
+        guardianPhone: "",
+        guardianSecondPhone: "",
         childName: "",
         childAge: "",
         message: "",
@@ -61,6 +65,25 @@ const Appoint = () => {
               value={appointment.guardianEmail}
               onChange={handleChange}
               required
+            />
+          </div>
+          <div className="flex-container">
+            <input
+              type="text"
+              name="guardianPhone"
+              placeholder="Guardian Phone Number"
+              className="input3"
+              value={appointment.guardianPhone}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="text"
+              name="guardianSecondPhone"
+              placeholder="Guardian Second Phone Number"
+              className="input4"
+              value={appointment.guardianSecondPhone}
+              onChange={handleChange}
             />
           </div>
           <div className="flex-container">

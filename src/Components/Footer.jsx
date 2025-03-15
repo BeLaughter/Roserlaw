@@ -12,6 +12,12 @@ import {
 import { FaLocationDot } from "react-icons/fa6";
 import { IoCall } from "react-icons/io5";
 import { IoIosMail } from "react-icons/io";
+import child1 from "../assets/child1.jpg";
+import child2 from "../assets/child2.jpg";
+import child3 from "../assets/child3.jpg";
+import child4 from "../assets/child4.jpg";
+import child5 from "../assets/child5.jpg";
+import child6 from "../assets/child6.jpg";
 function Footer() {
   return (
     <div className="footer">
@@ -66,12 +72,17 @@ function Footer() {
             <li>
               <div className="flen">
                 <img
-                  src="https://cdn.pixabay.com/photo/2021/03/08/20/14/child-6080185_640.jpg"
+                  src={child1}
                   alt="Testimonial Image"
                   className="gallery-img"
                 />
                 <img
-                  src="https://cdn.pixabay.com/photo/2023/03/16/16/20/little-girl-7857049_640.jpg"
+                  src={child2}
+                  alt="Testimonial Image"
+                  className="gallery-img"
+                />
+                <img
+                  src={child3}
                   alt="Testimonial Image"
                   className="gallery-img"
                 />
@@ -80,12 +91,17 @@ function Footer() {
             <li>
               <div className="flen">
                 <img
-                  src="https://cdn.pixabay.com/photo/2014/04/05/11/39/read-316507_640.jpg"
+                  src={child4}
                   alt="Testimonial Image"
                   className="gallery-img"
                 />
                 <img
-                  src="https://cdn.pixabay.com/photo/2019/08/08/14/46/indian-holiday-4393133_640.jpg"
+                  src={child5}
+                  alt="Testimonial Image"
+                  className="gallery-img"
+                />
+                <img
+                  src={child6}
                   alt="Testimonial Image"
                   className="gallery-img"
                 />

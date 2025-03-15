@@ -1,6 +1,8 @@
 import React from "react";
 import "./Pop.css";
 import { FaInstagram, FaWhatsapp, FaLinkedin } from "react-icons/fa";
+import san from "../assets/san.jpg";
+import teacher1 from "../assets/teacher1.png";
 
 const Pop = () => {
   return (
@@ -14,13 +16,10 @@ const Pop = () => {
         {/* Teacher 1 */}
         <div className="oval">
           <div className="big-cir">
-            <img
-              className="bigc-img"
-              src="https://cdn.pixabay.com/photo/2023/12/15/17/13/woman-8451051_640.jpg"
-              alt="Teacher"
-            />
+            <img className="bigc-img" src={teacher1} alt="Teacher" />
             <div className="small-cir">
               <h3 className="text-dark ">Mrs Lawal</h3>
+              <h4 className="text-dark">Teacher</h4>
               <span className="flex">
                 <a href="#" target="blank">
                   <FaInstagram className="icons" />
@@ -39,13 +38,10 @@ const Pop = () => {
         {/* Teacher 2 */}
         <div className="oval">
           <div className="big-cir">
-            <img
-              className="bigc-img"
-              src="https://cdn.pixabay.com/photo/2016/03/02/10/37/allrounder-1232063_640.jpg"
-              alt="Teacher"
-            />
+            <img className="bigc-img" src={san} alt="Teacher" />
             <div className="small-cir">
-              <h3 className="text-dark ">Mr Daniel</h3>
+              <h3 className="text-dark ">Mr Sanusi</h3>
+              <h4 className="text-dark">Head Master</h4>
               <span className="flex">
                 <a href="#" target="blank">
                   <FaInstagram className="icons" />
@@ -71,6 +67,7 @@ const Pop = () => {
             />
             <div className="small-cir">
               <h3 className="text-dark ">Mrs Adebanjo</h3>
+              <h4 className="text-dark">Teacher</h4>
               <span className="flex">
                 <a href="#" target="blank">
                   <FaInstagram className="icons" />

@@ -1,5 +1,6 @@
 import "./Body.css";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
+import body2 from "../assets/body2.jpg";
 function Body() {
   return (
     <div
@@ -9,11 +10,7 @@ function Body() {
     >
       <div className="carousel-inner">
         <div className="carousel-item imgh active">
-          <img
-            src="https://cdn.pixabay.com/photo/2015/08/05/13/55/children-876543_640.jpg"
-            className="d-block w-100"
-            alt="Image 1"
-          ></img>
+          <img src={body2} className="d-block w-100" alt="Image 1"></img>
           <div className="boxy"></div>
           <div className="carousel-caption capcaro">
             <h5
@@ -100,11 +97,7 @@ function Body() {
             <span className="visually-hidden">Next</span>
           </div>
           <div className="img-botton hiddenonmobile">
-            <img
-              src="https://cdn.pixabay.com/photo/2015/08/05/13/55/children-876543_640.jpg"
-              className="d-block w-100"
-              alt="Image 1"
-            ></img>
+            <img src={body2} className="d-block w-100" alt="Image 1"></img>
           </div>
         </div>
       </button>

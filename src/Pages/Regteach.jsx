@@ -7,6 +7,7 @@ const Regteach = () => {
   const [teacher, setTeacher] = useState({
     name: "",
     email: "",
+    phone: "", // Added phone number
     subject: "",
     experience: "",
     password: "",
@@ -38,6 +39,7 @@ const Regteach = () => {
       await setDoc(doc(db, "teachers", user.uid), {
         name: teacher.name,
         email: teacher.email,
+        phone: teacher.phone, // Store phone number in Firestore
         subject: teacher.subject,
         experience: teacher.experience,
       });
@@ -46,6 +48,7 @@ const Regteach = () => {
       setTeacher({
         name: "",
         email: "",
+        phone: "",
         subject: "",
         experience: "",
         password: "",
@@ -78,6 +81,17 @@ const Regteach = () => {
           placeholder="Email"
           className="input-reg"
           value={teacher.email}
+          onChange={handleChange}
+          required
+        />
+
+        <label>Phone Number:</label>
+        <input
+          type="tel"
+          name="phone"
+          placeholder="Phone Number"
+          className="input-reg"
+          value={teacher.phone}
           onChange={handleChange}
           required
         />

@@ -1,5 +1,10 @@
 import React from "react";
 import "./Aboutus.css";
+// import director from "../assets/director.jpg";
+import director2 from "../assets/director2.jpg";
+import child1 from "../assets/child1.jpg";
+import child2 from "../assets/child2.jpg";
+import child3 from "../assets/child3.jpg";
 const Aboutus = () => {
   return (
     <div className="flex-container aboutus">
@@ -18,13 +23,9 @@ const Aboutus = () => {
         <div className="flex-container">
           <a className="btn about-btn ">Read More</a>
           <div className="flex av">
-            <img
-              className="avatar"
-              src="https://randomuser.me/api/portraits/men/2.jpg"
-              alt="User 2"
-            />
+            <img className="avatar" src={director2} alt="User 2" />
             <p>
-              Joe Rogan <br></br> Director
+              Mrs Benson <br></br> Managing Director
             </p>
           </div>
         </div>
@@ -33,26 +34,17 @@ const Aboutus = () => {
         <div className="circle-container">
           {/* Big Circle */}
           <div className="circle big-circle">
-            <img
-              src="https://cdn.pixabay.com/photo/2018/02/07/18/30/group-3137670_1280.jpg"
-              alt="Big Circle"
-            />
+            <img src={child1} alt="Big Circle" />
           </div>
 
           {/* Small Left Circle */}
           <div className="circle small-circle left">
-            <img
-              src="https://cdn.pixabay.com/photo/2017/09/02/10/31/learn-2706897_640.jpg"
-              alt="Left Circle"
-            />
+            <img src={child2} alt="Left Circle" />
           </div>
 
           {/* Small Right Circle */}
           <div className="circle small-circle right">
-            <img
-              src="https://cdn.pixabay.com/photo/2021/10/07/15/24/park-6688951_640.jpg"
-              alt="Right Circle"
-            />
+            <img src={child3} alt="Right Circle" />
           </div>
         </div>
       </div>
