@@ -1,12 +1,20 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { auth, db } from "../firebase"; // Ensure correct path
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { doc, setDoc } from "firebase/firestore";
 
 const Regteach = () => {
   const [teacher, setTeacher] = useState({
     name: "",
     email: "",
     subject: "",
+    experience: "",
     password: "",
   });
+
+  useEffect(() => {
+    console.log("Regteach component mounted!");
+  }, []);
 
   const handleChange = (e) => {
     setTeacher({ ...teacher, [e.target.name]: e.target.value });
@@ -15,27 +23,36 @@ const Regteach = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch(
-        "http://localhost:5000/api/teachers/register",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(teacher),
-        }
+      console.log("Submitting:", teacher); // Debugging step
+
+      // Register user in Firebase Auth
+      const userCredential = await createUserWithEmailAndPassword(
+        auth,
+        teacher.email,
+        teacher.password
       );
 
-      const data = await response.json();
-      if (response.ok) {
-        alert("Teacher registered successfully!");
-        setTeacher({ name: "", email: "", subject: "", password: "" }); // Clear form
-      } else {
-        alert(data.message || "Something went wrong!");
-      }
+      const user = userCredential.user;
+
+      // Save additional data in Firestore
+      await setDoc(doc(db, "teachers", user.uid), {
+        name: teacher.name,
+        email: teacher.email,
+        subject: teacher.subject,
+        experience: teacher.experience,
+      });
+
+      alert("Teacher registered successfully!");
+      setTeacher({
+        name: "",
+        email: "",
+        subject: "",
+        experience: "",
+        password: "",
+      });
     } catch (error) {
-      console.error("Error:", error);
-      alert("Failed to register teacher");
+      console.error("Error:", error.message);
+      alert(error.message);
     }
   };
 
@@ -43,7 +60,7 @@ const Regteach = () => {
     <div className="regteach">
       <h2 className="title text-center text-dark">Register as a Teacher</h2>
       <form onSubmit={handleSubmit}>
-        <label for="subject">Full Name:</label>
+        <label>Full Name:</label>
         <input
           type="text"
           name="name"
@@ -53,7 +70,8 @@ const Regteach = () => {
           onChange={handleChange}
           required
         />
-        <label for="subject">Email:</label>
+
+        <label>Email:</label>
         <input
           type="email"
           name="email"
@@ -63,8 +81,16 @@ const Regteach = () => {
           onChange={handleChange}
           required
         />
-        <label for="subject">Subject of Expertise:</label>
-        <select id="subject" name="subject" className="input-reg" required>
+
+        <label>Subject of Expertise:</label>
+        <select
+          name="subject"
+          className="input-reg"
+          value={teacher.subject}
+          onChange={handleChange}
+          required
+        >
+          <option value="">Select Subject</option>
           <option value="math">Mathematics</option>
           <option value="science">Science</option>
           <option value="english">English</option>
@@ -72,17 +98,29 @@ const Regteach = () => {
           <option value="other">Other</option>
         </select>
 
-        <label for="experience">Years of Experience:</label>
+        <label>Years of Experience:</label>
         <input
           type="number"
-          id="experience"
           name="experience"
           className="input-reg"
           min="0"
+          value={teacher.experience}
+          onChange={handleChange}
           required
-        ></input>
+        />
 
-        <button type="submit" className=" btn teach-btn">
+        <label>Password:</label>
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          className="input-reg"
+          value={teacher.password}
+          onChange={handleChange}
+          required
+        />
+
+        <button type="submit" className="btn teach-btn">
           Register
         </button>
       </form>
