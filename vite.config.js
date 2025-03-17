@@ -4,9 +4,13 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   build: {
-    outDir: "dist", // Ensure output directory is set correctly
+    outDir: "dist", // Ensure correct output folder
   },
   server: {
-    historyApiFallback: true, // Ensures dev server handles routing properly
+    historyApiFallback: true, // This is for local dev, not production
+  },
+  preview: {
+    port: 4173,
+    strictPort: true,
   },
 });
