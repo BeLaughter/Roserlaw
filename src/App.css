@@ -29,6 +29,15 @@
   .dashboard {
     padding: 10px;
   }
+  .signindiv {
+    padding: 20px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 85%;
+    background-color: #f3f0ee;
+    box-shadow: 0 4px 6px rgba(8, 8, 8, 0.5);
+  }
 }
 
 /* style contents for larger screens only */
@@ -57,6 +66,13 @@
   }
   .dashboard {
     padding: 100px;
+  }
+  .signindiv {
+    padding: 20px;
+    margin: auto;
+    width: 400px;
+    background-color: #f3f0ee;
+    box-shadow: 0 4px 6px rgba(8, 8, 8, 0.5);
   }
 }
 

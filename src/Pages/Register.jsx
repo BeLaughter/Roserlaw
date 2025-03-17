@@ -29,43 +29,45 @@ function Register() {
   };
   return (
     <div className="register-container">
-      <h2 className="text-center title text-dark">Register</h2>
-      {error && <p className="error">{error}</p>}
-      <form onSubmit={handleRegister}>
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          className="input-reg"
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-        <input
-          type="password"
-          placeholder="Password"
-          className="input-reg"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-        <input
-          type="password"
-          placeholder="Confirm Password"
-          value={confirmPassword}
-          className="input-reg"
-          onChange={(e) => setConfirmPassword(e.target.value)}
-          required
-        />
-        <button type="submit" className="btn teach-btn">
-          Register
-        </button>
-      </form>
-      <p className="text-center ptop">
-        Already have an account? <Link to="/login">Login</Link>
-      </p>
-      <p className="text-center ptop">
-        Return to home <a href="/">HOME</a>
-      </p>
+      <div className="signindiv">
+        <h2 className="text-center title text-dark">Register</h2>
+        {error && <p className="error">{error}</p>}
+        <form onSubmit={handleRegister}>
+          <input
+            type="email"
+            placeholder="Email"
+            value={email}
+            className="input-reg"
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            className="input-reg"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Confirm Password"
+            value={confirmPassword}
+            className="input-reg"
+            onChange={(e) => setConfirmPassword(e.target.value)}
+            required
+          />
+          <button type="submit" className="btn teach-btn">
+            Register
+          </button>
+        </form>
+        <p className="text-center ptop">
+          Already have an account? <Link to="/login">Login</Link>
+        </p>
+        <p className="text-center ptop">
+          Return to home <a href="/">HOME</a>
+        </p>
+      </div>
     </div>
   );
 }
