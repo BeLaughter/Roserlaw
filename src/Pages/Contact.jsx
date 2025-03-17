@@ -5,7 +5,7 @@ import { IoIosMail } from "react-icons/io";
 import { db } from "../firebase"; // Import Firebase config
 import { collection, addDoc } from "firebase/firestore";
 import "../Components/Contact.css";
-import Map from "../Components/Map";
+// import Map from "../Components/Map";
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -118,7 +118,15 @@ const Contact = () => {
           </form>
         </div>
         <div className="flex2">
-          <Map />
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3961.618354396927!2d3.9247528976416572!3d6.816186942797655!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103969811b236b9f%3A0xf34b3fee1c113b8b!2sRosalaw%20School!5e0!3m2!1sen!2sng!4v1742209456196!5m2!1sen!2sng"
+            width="100%"
+            height="100%"
+            style={{ border: "0" }}
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
         </div>
       </div>
     </div>
