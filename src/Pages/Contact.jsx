@@ -5,7 +5,6 @@ import { IoIosMail } from "react-icons/io";
 import { db } from "../firebase"; // Import Firebase config
 import { collection, addDoc } from "firebase/firestore";
 import "../Components/Contact.css";
-// import Map from "../Components/Map";
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
