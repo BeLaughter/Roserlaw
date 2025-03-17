@@ -139,8 +139,8 @@ function Navbar() {
             </li>
           </ul>
         </div>
-        <Link to="/login">
-          <button className="btn navbar-btn hiddenonmobile mr">Login</button>
+        <Link to="/login" className="btn navbar-btn hiddenonmobile mr">
+          Login
         </Link>
 
         {/* Join Us Button */}

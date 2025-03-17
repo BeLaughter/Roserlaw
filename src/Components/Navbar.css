@@ -65,7 +65,7 @@
   border-radius: 15px;
   background: linear-gradient(90deg, #2dff1a 16%, #0bf559 50%);
   padding: 6px 20px;
-  box-shadow: 0 4px 6px rgba(8, 8, 8, 0.5);
+  box-shadow: 0 4px 6px #08080880;
 }
 
 .navbar-btn:hover {
