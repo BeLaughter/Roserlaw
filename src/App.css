@@ -73,7 +73,7 @@ ul li {
 }
 
 .b2top {
-  /* display: none; */
+  display: none;
   position: fixed;
   bottom: 50px; /* Distance from the bottom of the page */
   right: 20px;

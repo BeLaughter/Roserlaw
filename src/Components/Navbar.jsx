@@ -52,14 +52,14 @@ function Navbar() {
         <div className={`collapse navbar-collapse ${navbarOpen ? "show" : ""}`}>
           <ul className="navbar-nav mx-auto">
             <li className="nav-item">
-              <Link to="/" className="nav-link active" onClick={closeNavbar}>
+              <a href="/" className="nav-link active" onClick={closeNavbar}>
                 Home
-              </Link>
+              </a>
             </li>
             <li className="nav-item">
-              <Link to="/about" className="nav-link" onClick={closeNavbar}>
+              <a href="/about" className="nav-link" onClick={closeNavbar}>
                 About Us
-              </Link>
+              </a>
             </li>
             <li className="nav-item">
               <Link to="/class" className="nav-link" onClick={closeNavbar}>
@@ -79,47 +79,27 @@ function Navbar() {
               {dropdownOpen && (
                 <ul className="dropdown-menu show">
                   <li>
-                    <a
-                      href="/page/1"
-                      className="dropdown-item"
-                      onClick={closeNavbar}
-                    >
+                    <a href="/" className="dropdown-item" onClick={closeNavbar}>
                       School Facilities
                     </a>
                   </li>
                   <li>
-                    <a
-                      href="/page/2"
-                      className="dropdown-item"
-                      onClick={closeNavbar}
-                    >
+                    <a href="/" className="dropdown-item" onClick={closeNavbar}>
                       Popular Teachers
                     </a>
                   </li>
                   <li>
-                    <a
-                      href="/page/3"
-                      className="dropdown-item"
-                      onClick={closeNavbar}
-                    >
+                    <a href="/" className="dropdown-item" onClick={closeNavbar}>
                       Become A Teacher
                     </a>
                   </li>
                   <li>
-                    <a
-                      href="/page/4"
-                      className="dropdown-item"
-                      onClick={closeNavbar}
-                    >
+                    <a href="/" className="dropdown-item" onClick={closeNavbar}>
                       Make Appointment
                     </a>
                   </li>
                   <li>
-                    <a
-                      href="/page/5"
-                      className="dropdown-item"
-                      onClick={closeNavbar}
-                    >
+                    <a href="/" className="dropdown-item" onClick={closeNavbar}>
                       Testimonial
                     </a>
                   </li>
@@ -128,14 +108,14 @@ function Navbar() {
             </li>
 
             <li className="nav-item">
-              <Link to="/contact" className="nav-link" onClick={closeNavbar}>
+              <a href="/contact" className="nav-link" onClick={closeNavbar}>
                 Contact Us
-              </Link>
+              </a>
             </li>
             <li className="nav-item hiddenonlap">
-              <Link to="/login" className="nav-link" onClick={closeNavbar}>
+              <a href="/login" className="nav-link" onClick={closeNavbar}>
                 T/S Login
-              </Link>
+              </a>
             </li>
           </ul>
         </div>
