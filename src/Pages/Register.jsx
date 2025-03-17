@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useAuth } from "../AuthContext";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function Register() {
   const [email, setEmail] = useState("");
@@ -60,7 +61,7 @@ function Register() {
         </button>
       </form>
       <p className="text-center ptop">
-        Already have an account? <a href="/login">Login</a>
+        Already have an account? <Link to="/login">Login</Link>
       </p>
       <p className="text-center ptop">
         Return to home <a href="/">HOME</a>
