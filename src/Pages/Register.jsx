@@ -31,7 +31,7 @@ function Register() {
     <div className="register-container">
       <div className="signindiv">
         <h2 className="text-center title text-dark">Register</h2>
-        {error && <p className="error">{error}</p>}
+        {error && <p className="error text-danger">{error}</p>}
         <form onSubmit={handleRegister}>
           <input
             type="email"
