@@ -139,9 +139,13 @@ function Navbar() {
             </li>
           </ul>
         </div>
-        <Link to="/login">
-          <button className="btn navbar-btn hiddenonmobile mr">Login</button>
-        </Link>
+
+        <button
+          onClick={() => (window.location.href = "/login")}
+          className="btn navbar-btn hiddenonmobile mr"
+        >
+          Login
+        </button>
 
         {/* Join Us Button */}
         <Link to="/contact" className="btn hiddenonmobile navbar-btn ms-auto">
