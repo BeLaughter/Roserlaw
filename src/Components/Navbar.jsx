@@ -134,18 +134,14 @@ function Navbar() {
             </li>
             <li className="nav-item hiddenonlap">
               <Link to="/login" className="nav-link" onClick={closeNavbar}>
-                T/S Login
+                Login
               </Link>
             </li>
           </ul>
         </div>
-
-        <button
-          onClick={() => (window.location.href = "/login")}
-          className="btn navbar-btn hiddenonmobile mr"
-        >
-          T/S Login
-        </button>
+        <Link to="/login">
+          <button className="btn navbar-btn hiddenonmobile mr">Login</button>
+        </Link>
 
         {/* Join Us Button */}
         <Link to="/contact" className="btn hiddenonmobile navbar-btn ms-auto">
