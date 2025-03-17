@@ -101,14 +101,6 @@ function Body() {
           </div>
         </div>
       </button>
-      <div className="text-center hiddenonmobile">
-        <button
-          onClick={() => (window.location.href = "/login")}
-          className="btn navbar-btn ptop"
-        >
-          T/S Login
-        </button>
-      </div>
     </div>
   );
 }
