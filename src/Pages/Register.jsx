@@ -22,7 +22,7 @@ function Register() {
 
     try {
       await register(email, password);
-      navigate("/dashboard"); // Redirect after successful registration
+      navigate("/login"); // Redirect after successful registration
     } catch (err) {
       setError(err.message); // Show detailed Firebase error
     }
