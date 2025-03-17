@@ -132,6 +132,11 @@ function Navbar() {
                 Contact Us
               </Link>
             </li>
+            <li className="nav-item hiddenonlap">
+              <Link to="/login" className="nav-link" onClick={closeNavbar}>
+                T/S Login
+              </Link>
+            </li>
           </ul>
         </div>
 

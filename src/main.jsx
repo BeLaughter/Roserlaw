@@ -1,12 +1,20 @@
-import { createRoot } from "react-dom/client";
-import "./index.css";
-import App from "./App.jsx";
+import React from "react";
+import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
+import App from "./App";
+import { AuthProvider } from "./AuthContext";
+import "./index.css";
 
-// Render the App component in the #root element of the HTML document.
-
-createRoot(document.getElementById("root")).render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+ReactDOM.createRoot(document.getElementById("root")).render(
+  <React.StrictMode>
+    <AuthProvider>
+      {" "}
+      {/* ✅ Wrap AuthProvider here */}
+      <BrowserRouter>
+        {" "}
+        {/* ✅ Only one Router */}
+        <App />
+      </BrowserRouter>
+    </AuthProvider>
+  </React.StrictMode>
 );

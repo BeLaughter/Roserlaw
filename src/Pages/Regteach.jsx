@@ -137,6 +137,9 @@ const Regteach = () => {
         <button type="submit" className="btn teach-btn">
           Register
         </button>
+        <p className="text-center ptop">
+          Return to home <a href="/">HOME</a>
+        </p>
       </form>
     </div>
   );

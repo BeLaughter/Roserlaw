@@ -3,6 +3,8 @@ import { Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
+
+// Import Public Pages
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
@@ -11,48 +13,80 @@ import Page from "./Pages/Page";
 import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import Regteach from "./Pages/Regteach";
+import Register from "./Pages/Register";
+// Import Auth & Private Pages
+import PrivateRoute from "./PrivateRoute";
+import Login from "./Pages/Login";
+import Dashboard from "./Pages/Dashboard";
 
 function App() {
-  // Initialize AOS
+  // Initialize AOS animations
   useEffect(() => {
     Aos.init();
   }, []);
-  // Function to scroll to top when button is clicked.
+
+  // Function to scroll to top when button is clicked
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: "smooth",
     });
   };
-  //add/remove display class to btn when screen is scrolled to half vheight
-  // window.addEventListener("scroll", function () {
-  //   let btntop = document.querySelector(".b2top");
-  //   let scrollThreshold = btntop.offsetTop + window.innerHeight / 2; // 50vh below  position
 
-  //   if (window.scrollY > scrollThreshold) {
-  //     btntop.classList.add("display-btn");
-  //   } else {
-  //     btntop.classList.remove("display-btn");
-  //   }
-  // });
+  // Add/remove display class to button when scrolled past 50% viewport height
+  useEffect(() => {
+    const handleScroll = () => {
+      const btntop = document.querySelector(".b2top");
+      if (btntop) {
+        let scrollThreshold = window.innerHeight / 2;
+
+        if (window.scrollY > scrollThreshold) {
+          btntop.classList.add("display-btn");
+        } else {
+          btntop.classList.remove("display-btn");
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div>
+    <>
+      {/* Scroll to Top Button */}
       <div className="b2top">
         <a href="#totop" onClick={scrollToTop}>
           ^
         </a>
       </div>
+
       <Navbar />
+
+      {/* Public Routes (Accessible to Everyone) */}
       <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route exact path="/about" element={<About />} />
-        <Route exact path="/class" element={<Class />} />
-        <Route exact path="/page" element={<Page />} />
-        <Route exact path="/contact" element={<Contact />} />
-        <Route exact path="/regteach" element={<Regteach />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/class" element={<Class />} />
+        <Route path="/page" element={<Page />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/regteach" element={<Regteach />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+
+        {/* Private Routes (Only for Logged-In Users) */}
+        <Route
+          path="/dashboard"
+          element={
+            <PrivateRoute>
+              <Dashboard />
+            </PrivateRoute>
+          }
+        />
       </Routes>
+
       <Footer />
-    </div>
+    </>
   );
 }
 

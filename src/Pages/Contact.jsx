@@ -112,6 +112,9 @@ const Contact = () => {
             <button type="submit" className="btn teach-btn">
               Send Message
             </button>
+            <p className="text-center ptop">
+              Return to home <a href="/">HOME</a>
+            </p>
           </form>
         </div>
         <div className="flex2"></div>

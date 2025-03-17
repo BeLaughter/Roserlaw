@@ -28,7 +28,7 @@ function Body() {
               Start A Brighter Future<br></br>For Your Child
             </p>
             <div className="flex">
-              <a className="btn caroa" href="#">
+              <a className="btn caroa" href="#learn">
                 Learn More
               </a>
               <a className="btn caroa" href="#">
@@ -53,7 +53,7 @@ function Body() {
               schools!
             </p>
             <div className="flex">
-              <a className="btn caroa" href="#">
+              <a className="btn caroa" href="#learn">
                 Learn More
               </a>
               <a className="btn caroa" href="#">
@@ -101,6 +101,14 @@ function Body() {
           </div>
         </div>
       </button>
+      <div className="text-center hiddenonmobile">
+        <button
+          onClick={() => (window.location.href = "/login")}
+          className="btn navbar-btn ptop"
+        >
+          T/S Login
+        </button>
+      </div>
     </div>
   );
 }

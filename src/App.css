@@ -20,6 +20,15 @@
   .regteach {
     padding: 20px;
   }
+  .loggin {
+    padding: 10px;
+  }
+  .register-container {
+    padding: 10px;
+  }
+  .dashboard {
+    padding: 10px;
+  }
 }
 
 /* style contents for larger screens only */
@@ -39,6 +48,15 @@
   .regteach {
     padding: 100px;
     padding-top: 50px !important;
+  }
+  .loggin {
+    padding: 100px;
+  }
+  .register-container {
+    padding: 100px;
+  }
+  .dashboard {
+    padding: 100px;
   }
 }
 
@@ -92,4 +110,13 @@ ul li {
   height: 50px;
   border-radius: 15px;
   outline: 2px solid rgb(178, 238, 178);
+}
+textarea {
+  outline: 2px solid rgb(12, 12, 12);
+}
+textarea:focus {
+  outline: 3px solid green;
+}
+.celeb {
+  color: blue;
 }
