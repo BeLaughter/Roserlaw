@@ -27,7 +27,7 @@ const Studentdash = () => {
 
   const handleLogout = async () => {
     await logout();
-    navigate("/"); // Redirect to home after logout
+    navigate("/register"); // Redirect to home after logout
   };
 
   return (
@@ -62,7 +62,7 @@ const Studentdash = () => {
               <FaCogs /> Settings
             </li>
             <li onClick={handleLogout} className="btn teach-btn">
-              <FaSignOutAlt /> Logout
+              <FaSignOutAlt /> Logout now
             </li>
           </ul>
         </nav>
