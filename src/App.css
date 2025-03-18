@@ -78,6 +78,14 @@
     background-color: #f3f0ee;
     box-shadow: 0 4px 6px rgba(8, 8, 8, 0.5);
   }
+  .signindiv2 {
+    padding: 20px;
+    margin-bottom: 50px;
+    margin-right: 30px;
+    width: 30%;
+    background-color: #f3f0ee;
+    box-shadow: 0 4px 6px rgba(8, 8, 8, 0.5);
+  }
 }
 
 /* stylings that doesnt affect screens only */

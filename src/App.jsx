@@ -74,6 +74,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
 
+
         {/* Private Routes (Only for Logged-In Users) */}
         <Route
           path="/dashboard"

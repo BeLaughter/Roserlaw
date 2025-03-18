@@ -6,6 +6,7 @@ import Teach from "../Components/Teach";
 import Appoint from "../Components/Appoint";
 import Pop from "../Components/Pop";
 import Testi from "../Components/Testi";
+import Dashboard from "./Dashboard";
 const Home = () => {
   return (
     <div>

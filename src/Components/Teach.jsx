@@ -26,10 +26,8 @@ const Teach = () => {
             skills, passion, and dedication to educate and inspire, we would
             love to hear from you!
           </p>
-          <Link to="/regteach">
-            <a className="btn teach-btn ">
-              Get Started Now <FaArrowRight className="icon" />
-            </a>
+          <Link to="/regteach" className="btn teach-btn ">
+            Get Started Now <FaArrowRight className="icon" />
           </Link>
         </div>
       </div>

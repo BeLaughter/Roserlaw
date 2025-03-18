@@ -3,13 +3,21 @@ import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   onAuthStateChanged,
-  updateProfile,
+  sendEmailVerification,
   signOut,
+  updateProfile,
 } from "firebase/auth";
 import { auth } from "./firebase";
-import { getFirestore, doc, setDoc, getDoc } from "firebase/firestore"; // Firestore imports
+import {
+  getFirestore,
+  doc,
+  setDoc,
+  getDoc,
+  updateDoc,
+} from "firebase/firestore";
 
-const db = getFirestore(); // Initialize Firestore
+// Initialize Firestore
+const db = getFirestore();
 const AuthContext = createContext(null);
 
 export const AuthProvider = ({ children }) => {
@@ -20,10 +28,14 @@ export const AuthProvider = ({ children }) => {
       if (currentUser) {
         // Fetch user data from Firestore
         const userDoc = await getDoc(doc(db, "users", currentUser.uid));
-        if (userDoc.exists()) {
-          setUser({ ...currentUser, displayName: userDoc.data().name });
+
+        if (userDoc.exists() && currentUser.emailVerified) {
+          setUser({
+            ...currentUser,
+            displayName: userDoc.data().name,
+          });
         } else {
-          setUser(currentUser);
+          setUser(null); // User is unverified or missing in Firestore
         }
       } else {
         setUser(null);
@@ -33,59 +45,74 @@ export const AuthProvider = ({ children }) => {
     return () => unsubscribe();
   }, []);
 
-  // 🔹 Register function with name support
+  // ✅ Register function (Enforces Email Verification)
   const register = async (email, password, name) => {
-    const userCredential = await createUserWithEmailAndPassword(
-      auth,
-      email,
-      password
-    );
-    const user = userCredential.user;
-
-    // Update display name in Firebase Authentication
-    await updateProfile(user, { displayName: name });
-
-    // Store user data in Firestore
-    await setDoc(doc(db, "users", user.uid), {
-      name: name,
-      email: user.email,
-      createdAt: new Date().toISOString(),
-    });
-
-    // Update state with name
-    setUser({ ...user, displayName: name });
-
-    return user;
-  };
-
-  // 🔹 Login function
-  const login = async (email, password) => {
-    const userCredential = await signInWithEmailAndPassword(
-      auth,
-      email,
-      password
-    );
-    const user = userCredential.user;
-
-    // Fetch name from Firestore
-    const userDoc = await getDoc(doc(db, "users", user.uid));
-    if (userDoc.exists()) {
-      setUser({ ...user, displayName: userDoc.data().name });
-    } else {
-      setUser(user);
-    }
-
-    return user;
-  };
-
-  // 🔹 Logout function
-  const logout = async () => {
     try {
+      const userCredential = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+      const user = userCredential.user;
+
+      // Send email verification
+      await sendEmailVerification(user);
+
+      // Store user in Firestore
+      await setDoc(doc(db, "users", user.uid), {
+        name,
+        email: user.email,
+        createdAt: new Date().toISOString(),
+        emailVerified: false, // User must verify first
+      });
+
+      // Log out to prevent login before verification
       await signOut(auth);
-      setUser(null);
+
+      throw new Error(
+        "Registration successful! Please verify your email before logging in."
+      );
     } catch (error) {
-      console.error("Logout error:", error);
+      throw new Error(error.message);
     }
+  };
+
+  // ✅ Login function (Blocks Unverified Users)
+  const login = async (email, password) => {
+    try {
+      const userCredential = await signInWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+      const user = userCredential.user;
+
+      if (!user.emailVerified) {
+        await signOut(auth);
+        throw new Error("Email not verified. Please check your inbox.");
+      }
+
+      // Fetch user data from Firestore
+      const userDocRef = doc(db, "users", user.uid);
+      const userDoc = await getDoc(userDocRef);
+
+      if (userDoc.exists()) {
+        await updateDoc(userDocRef, { emailVerified: true }); // Mark verified
+        setUser({ ...user, displayName: userDoc.data().name });
+      } else {
+        setUser(user);
+      }
+
+      return user;
+    } catch (error) {
+      throw new Error(error.message);
+    }
+  };
+
+  // ✅ Logout function
+  const logout = async () => {
+    await signOut(auth);
+    setUser(null);
   };
 
   return (
@@ -95,7 +122,4 @@ export const AuthProvider = ({ children }) => {
   );
 };
 
-// Custom hook to use AuthContext
-export const useAuth = () => {
-  return useContext(AuthContext);
-};
+export const useAuth = () => useContext(AuthContext);

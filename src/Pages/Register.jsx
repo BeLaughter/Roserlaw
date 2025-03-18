@@ -4,17 +4,19 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 function Register() {
-  const [name, setName] = useState(""); // New state for name
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState(""); // Confirm password state
+  const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
   const { register } = useAuth();
   const navigate = useNavigate();
 
   const handleRegister = async (e) => {
     e.preventDefault();
     setError("");
+    setSuccessMessage("");
 
     if (password !== confirmPassword) {
       setError("Passwords do not match.");
@@ -22,10 +24,16 @@ function Register() {
     }
 
     try {
-      await register(email, password, name); // Pass name to register function
-      navigate("/login"); // Redirect after successful registration
+      await register(email, password, name);
+      setSuccessMessage(
+        "Registration successful! Check your email for verification before logging in."
+      );
+
+      setTimeout(() => {
+        navigate("/login");
+      }, 5000);
     } catch (err) {
-      setError(err.message); // Show detailed Firebase error
+      setError(err.message);
     }
   };
 
@@ -34,6 +42,9 @@ function Register() {
       <div className="signindiv">
         <h2 className="text-center title text-dark">Register</h2>
         {error && <p className="error text-danger">{error}</p>}
+        {successMessage && (
+          <p className="success text-success">{successMessage}</p>
+        )}
         <form onSubmit={handleRegister}>
           <input
             type="text"
@@ -54,8 +65,8 @@ function Register() {
           <input
             type="password"
             placeholder="Password"
-            className="input-reg"
             value={password}
+            className="input-reg"
             onChange={(e) => setPassword(e.target.value)}
             required
           />
@@ -73,9 +84,6 @@ function Register() {
         </form>
         <p className="text-center ptop">
           Already have an account? <Link to="/login">Login</Link>
-        </p>
-        <p className="text-center ptop">
-          Return to home <a href="/">HOME</a>
         </p>
       </div>
     </div>

@@ -33,7 +33,7 @@ const Studentdash = () => {
   return (
     <div className="dashboard-container">
       {/* Sidebar Navigation */}
-      <div className="signindiv">
+      <div className="signindiv2">
         <nav className="sidebar">
           <h2 className="text-center title">📚 Student Dashboard</h2>
           <ul className="text-center">
@@ -71,7 +71,7 @@ const Studentdash = () => {
       {/* Main Content Area */}
       <main className="dashboard-main">
         <header>
-          <h3>Welcome, {studentName} 🎉</h3>
+          <h2 className="title text-dark">Welcome, {studentName} 🎉</h2>
           <p>Track your courses, assignments, and more!</p>
         </header>
 

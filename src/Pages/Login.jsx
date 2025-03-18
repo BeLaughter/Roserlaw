@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase";
-import { Link } from "react-router-dom";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -12,11 +11,33 @@ const Login = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault();
+    setError("");
+
     try {
-      await signInWithEmailAndPassword(auth, email, password);
-      navigate("/dashboard"); // Redirect to private page after login
+      const userCredential = await signInWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+      const user = userCredential.user;
+
+      // 🚨 Check if email is verified
+      if (!user.emailVerified) {
+        setError("Please verify your email before logging in.");
+        return;
+      }
+
+      navigate("/dashboard"); // Redirect after successful login
     } catch (err) {
-      setError("Invalid email or password!");
+      if (err.code === "auth/user-not-found") {
+        setError("No account found with this email.");
+      } else if (err.code === "auth/wrong-password") {
+        setError("Incorrect password. Please try again.");
+      } else if (err.code === "auth/too-many-requests") {
+        setError("Too many failed attempts. Please try again later.");
+      } else {
+        setError("Login failed. Please check your credentials.");
+      }
     }
   };
 
@@ -24,7 +45,7 @@ const Login = () => {
     <div className="loggin">
       <div className="signindiv">
         <h2 className="text-center title text-dark">Login</h2>
-        {error && <p style={{ color: "red" }}>{error}</p>}
+        {error && <p className="error-message">{error}</p>}
         <form onSubmit={handleLogin}>
           <input
             type="email"
@@ -50,7 +71,7 @@ const Login = () => {
           Don't have an account? <Link to="/register">Register Now</Link>
         </p>
         <p className="text-center ptop">
-          Return to home <a href="/">HOME</a>
+          Return to home <Link to="/">HOME</Link>
         </p>
       </div>
     </div>
