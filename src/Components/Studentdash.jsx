@@ -27,7 +27,7 @@ const Studentdash = () => {
 
   const handleLogout = async () => {
     await logout();
-    navigate("/login"); // Redirect to login after logout
+    navigate("/"); // Redirect to home after logout
   };
 
   return (
