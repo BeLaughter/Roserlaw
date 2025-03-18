@@ -35,35 +35,35 @@ const Studentdash = () => {
       <div className="signindiv">
         <nav className="sidebar">
           <h2 className="text-center title text-dark">📚 Student Dashboard</h2>
-          <ul className="text-center">
-            <li className="btn teach-btn">
+          <div className="text-center">
+            <a className="btn teach-btn">
               <FaUser /> Profile
-            </li>
-            <li className="btn teach-btn">
+            </a>
+            <a className="btn teach-btn">
               <FaBook /> My Courses
-            </li>
-            <li className="btn teach-btn">
+            </a>
+            <a className="btn teach-btn">
               <FaClipboardList /> Assignments
-            </li>
-            <li className="btn teach-btn">
+            </a>
+            <a className="btn teach-btn">
               <FaChartLine /> Exam Results
-            </li>
-            <li className="btn teach-btn">
+            </a>
+            <a className="btn teach-btn">
               <FaBell /> Notifications
-            </li>
-            <li className="btn teach-btn">
+            </a>
+            <a className="btn teach-btn">
               <FaRegCalendarAlt /> Attendance
-            </li>
-            <li className="btn teach-btn">
+            </a>
+            <a className="btn teach-btn">
               <FaMoneyBillWave /> Fees & Payments
-            </li>
-            <li className="btn teach-btn">
+            </a>
+            <a className="btn teach-btn">
               <FaCogs /> Settings
-            </li>
-            <li onClick={handleLogout} className="btn teach-btn">
+            </a>
+            <a onClick={handleLogout} className="btn teach-btn">
               <FaSignOutAlt /> Logout
-            </li>
-          </ul>
+            </a>
+          </div>
         </nav>
       </div>
 
