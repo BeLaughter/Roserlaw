@@ -17,9 +17,6 @@ const Dashboard = () => {
 
       <Studentdash />
       <h4>More school updates will be sent here...</h4>
-      <button onClick={handleLogout} className="btn navbar-btn">
-        Logout
-      </button>
     </div>
   );
 };
