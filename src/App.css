@@ -33,7 +33,7 @@
     padding: 20px;
     margin: auto;
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
     width: 95%;
     background-color: #f3f0ee;
     box-shadow: 0 4px 6px rgba(8, 8, 8, 0.5);
@@ -73,6 +73,7 @@
   .signindiv {
     padding: 20px;
     margin: auto;
+    margin-bottom: 50px;
     width: 60%;
     background-color: #f3f0ee;
     box-shadow: 0 4px 6px rgba(8, 8, 8, 0.5);

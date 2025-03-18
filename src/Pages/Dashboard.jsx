@@ -1,7 +1,7 @@
 import { useAuth } from "../AuthContext";
 import { useNavigate } from "react-router-dom";
 import { MdCelebration } from "react-icons/md";
-
+import Studentdash from "../Components/Studentdash";
 const Dashboard = () => {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
@@ -14,11 +14,9 @@ const Dashboard = () => {
   return (
     <div className="dashboard">
       <h2 className="text-center title text-dark">Dashboard</h2>
-      <h3>
-        Welcome <MdCelebration className="celeb" />,{" "}
-        {user?.displayName || user?.email}
-      </h3>
-      <h4>Student dashboard - new school updates will be sent here later...</h4>
+
+      <Studentdash />
+      <h4>More school updates will be sent here...</h4>
       <button onClick={handleLogout} className="btn navbar-btn">
         Logout
       </button>
