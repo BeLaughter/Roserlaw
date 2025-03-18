@@ -1,3 +1,160 @@
 .teach-btn {
   margin-top: 20px;
 }
+
+/* style contents for mobile only */
+
+@media (max-width: 769px) {
+  .sidebar h2 {
+    text-align: center;
+    color: black;
+  }
+
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  header {
+    text-align: center;
+  }
+
+  .dashboard-cards {
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+  .card {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    margin: 10px;
+  }
+
+  .icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
+  .notifications,
+  .assignments {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+
+  th,
+  td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+
+  th {
+    background: #333;
+    color: white;
+  }
+}
+
+/* style contents for larger screens only */
+
+@media (min-width: 769px) {
+  .dashboard-container {
+    display: flex;
+    height: auto;
+    margin-bottom: 50px;
+  }
+
+  .sidebar {
+    width: 55%;
+    background: #333;
+    color: white;
+    padding: 20px;
+  }
+
+  .sidebar h2 {
+    text-align: center;
+  }
+
+  .sidebar ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .sidebar ul li {
+    padding: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .sidebar ul li:hover {
+    background: #444;
+  }
+
+  .dashboard-main {
+    flex: 1;
+    padding: 20px;
+    background: #f4f4f4;
+  }
+
+  header {
+    text-align: center;
+  }
+
+  .dashboard-cards {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+
+  .card {
+    background: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    margin: 10px;
+  }
+
+  .icon {
+    font-size: 30px;
+    margin-bottom: 10px;
+  }
+
+  .notifications,
+  .assignments {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+
+  th,
+  td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+  }
+
+  th {
+    background: #333;
+    color: white;
+  }
+}
+
+/* stylings that doesnt affect screens only */
