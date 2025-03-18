@@ -17,7 +17,6 @@ import "./Studentdash.css"; // Import CSS for styling
 const Studentdash = () => {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
-  const [studentName, setStudentName] = useState("Student"); // Placeholder name
 
   useEffect(() => {
     if (user) {
@@ -35,7 +34,7 @@ const Studentdash = () => {
       {/* Sidebar Navigation */}
       <div className="signindiv">
         <nav className="sidebar">
-          <h2 className="text-center">📚 Student Dashboard</h2>
+          <h2 className="text-center title text-dark">📚 Student Dashboard</h2>
           <ul className="text-center">
             <li className="btn teach-btn">
               <FaUser /> Profile

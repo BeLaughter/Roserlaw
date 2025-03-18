@@ -13,8 +13,6 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard">
-      <h2 className="text-center title text-dark">Dashboard</h2>
-
       <Studentdash />
       <h4>More school updates will be sent here...</h4>
     </div>
