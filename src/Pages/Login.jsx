@@ -1,13 +1,18 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { signInWithEmailAndPassword } from "firebase/auth";
-import { doc, updateDoc } from "firebase/firestore"; // ✅ Import Firestore methods
-import { auth, db } from "../firebase"; // ✅ Ensure you import `db` (Firestore)
+import {
+  signInWithEmailAndPassword,
+  signOut,
+  sendEmailVerification,
+} from "firebase/auth";
+import { doc, updateDoc } from "firebase/firestore";
+import { auth, db } from "../firebase";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const [emailVerified, setEmailVerified] = useState(true); // ✅ Default to true
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
@@ -22,22 +27,25 @@ const Login = () => {
       );
       const user = userCredential.user;
 
-      // 🔥 Reload user to get the latest email verification status
+      // 🔄 Reload user to get the latest email verification status
       await user.reload();
 
       if (!user.emailVerified) {
+        setEmailVerified(false); // ❌ Not verified, show resend button
         setError("Email not verified. Please check your inbox.");
-        return; // ✅ Stops further execution instead of signing out
+        await signOut(auth); // 🚨 Logout unverified users
+        return;
       }
 
-      // ✅ Update Firestore to reflect email is verified (only if it was previously false)
+      // ✅ Email is verified, update Firestore
+      setEmailVerified(true);
       const userDocRef = doc(db, "users", user.uid);
       await updateDoc(userDocRef, { emailVerified: true });
 
       // ✅ Redirect after successful login
       navigate("/dashboard");
     } catch (err) {
-      console.error("Login Error:", err.code, err.message); // ✅ Logs the exact Firebase error
+      console.error("Login Error:", err.code, err.message);
       if (err.code === "auth/user-not-found") {
         setError("No account found with this email.");
       } else if (err.code === "auth/wrong-password") {
@@ -47,6 +55,21 @@ const Login = () => {
       } else {
         setError("Login failed. Please check your credentials.");
       }
+    }
+  };
+
+  // 🔹 Resend Verification Email Function
+  const resendVerificationEmail = async () => {
+    if (auth.currentUser && !auth.currentUser.emailVerified) {
+      try {
+        await sendEmailVerification(auth.currentUser);
+        alert("Verification email sent! Please check your inbox.");
+      } catch (error) {
+        console.error("Error sending email verification:", error);
+        alert("Error sending verification email.");
+      }
+    } else {
+      alert("Email is already verified or user is not logged in.");
     }
   };
 
@@ -76,6 +99,19 @@ const Login = () => {
             Login
           </button>
         </form>
+
+        {/* 🔥 Show button ONLY if email is not verified */}
+        {!emailVerified && (
+          <div className="d-flex justify-content-center mt-3">
+            <button
+              onClick={resendVerificationEmail}
+              className="btn btn-primary"
+            >
+              Resend Verification Email
+            </button>
+          </div>
+        )}
+
         <p className="text-center ptop">
           Don't have an account? <Link to="/register">Register Now</Link>
         </p>
