@@ -26,6 +26,13 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
       if (currentUser) {
+        // Ensure we get the latest verification status
+        await currentUser.reload();
+        // Check if email is verified before updating Firestore
+        if (currentUser.emailVerified) {
+          const userDocRef = doc(db, "users", currentUser.uid);
+          await updateDoc(userDocRef, { emailVerified: true }); // Update Firestore
+        }
         // Fetch user data from Firestore
         const userDoc = await getDoc(doc(db, "users", currentUser.uid));
 

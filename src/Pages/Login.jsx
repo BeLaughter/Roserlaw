@@ -21,11 +21,17 @@ const Login = () => {
       );
       const user = userCredential.user;
 
-      // 🚨 Check if email is verified
+      // 🔥 Reload user to get the latest email verification status
+      await user.reload();
+
       if (!user.emailVerified) {
-        setError("Please verify your email before logging in.");
-        return;
+        await signOut(auth);
+        throw new Error("Email not verified. Please check your inbox.");
       }
+
+      // 🔥 Update Firestore to reflect that email is verified
+      const userDocRef = doc(db, "users", user.uid);
+      await updateDoc(userDocRef, { emailVerified: true });
 
       navigate("/dashboard"); // Redirect after successful login
     } catch (err) {
