@@ -32,7 +32,9 @@ const Login = () => {
 
       if (!user.emailVerified) {
         setEmailVerified(false); // ❌ Not verified, show resend button
-        setError("Email not verified. Please check your inbox.");
+        setError(
+          "Email not verified. Please check your inbox or request a new verification email."
+        );
         await signOut(auth); // 🚨 Logout unverified users
         return;
       }
@@ -58,18 +60,28 @@ const Login = () => {
     }
   };
 
-  // 🔹 Resend Verification Email Function
+  // 🔹 Resend Verification Email Function (Now re-authenticates first!)
   const resendVerificationEmail = async () => {
-    if (auth.currentUser && !auth.currentUser.emailVerified) {
-      try {
-        await sendEmailVerification(auth.currentUser);
+    try {
+      // 🔹 Sign in user again (to ensure they exist in `auth.currentUser`)
+      const userCredential = await signInWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
+      const user = userCredential.user;
+
+      await user.reload(); // Refresh email verification status
+
+      if (!user.emailVerified) {
+        await sendEmailVerification(user);
         alert("Verification email sent! Please check your inbox.");
-      } catch (error) {
-        console.error("Error sending email verification:", error);
-        alert("Error sending verification email.");
+      } else {
+        alert("Your email is already verified.");
       }
-    } else {
-      alert("Email is already verified or user is not logged in.");
+    } catch (error) {
+      console.error("Error resending email verification:", error);
+      alert("Error sending verification email. Please try again.");
     }
   };
 
