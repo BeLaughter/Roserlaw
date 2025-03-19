@@ -74,7 +74,7 @@ function App() {
         <Route path="/regteach" element={<Regteach />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/*" element={<Mistake />} /> {/* Catch-all 404 route */}
+        <Route path="*" element={<Mistake />} /> {/* Catch-all 404 route */}
         {/* Private Routes (Only for Logged-In Users) */}
         <Route
           path="/dashboard"
