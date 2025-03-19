@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { useAuth } from "../AuthContext"; // Import Authentication Context
+import { useAuth } from "../AuthContext"; // Authentication Context
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { db } from "../firebase";
+import { doc, getDoc } from "firebase/firestore";
 import {
   FaBook,
   FaUser,
@@ -12,23 +15,39 @@ import {
   FaRegCalendarAlt,
   FaCogs,
 } from "react-icons/fa";
-import "./Studentdash.css"; // Import CSS for styling
+import "./Studentdash.css"; // Import CSS
 
 const Studentdash = () => {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
-  const [studentName, setStudentName] = useState("Student");
+  const [studentData, setStudentData] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     if (user) {
-      setStudentName(user.displayName || user.email || "Student"); // Update student name
+      fetchStudentData(user.uid);
     }
   }, [user]);
 
+  const fetchStudentData = async (uid) => {
+    try {
+      const userDoc = await getDoc(doc(db, "users", uid));
+      if (userDoc.exists()) {
+        setStudentData(userDoc.data());
+      }
+    } catch (error) {
+      console.error("Error fetching student data:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
   const handleLogout = async () => {
     await logout();
-    navigate("/login"); // Redirect to login after logout
+    navigate("/login");
   };
+
+  if (loading) return <p>Loading...</p>;
 
   return (
     <div className="dashboard-container">
@@ -37,33 +56,34 @@ const Studentdash = () => {
         <nav className="sidebar">
           <h2 className="text-center title">📚 Student Dashboard</h2>
           <ul className="text-center">
-            <li className="btn teach-btn">
-              <FaUser /> Profile
-            </li>
-            <li className="btn teach-btn">
+            <Link to="/update" className="btn teach-btn">
+              <FaUser />
+              Update Profile
+            </Link>
+            <Link className="btn teach-btn">
               <FaBook /> My Courses
-            </li>
-            <li className="btn teach-btn">
+            </Link>
+            <Link className="btn teach-btn">
               <FaClipboardList /> Assignments
-            </li>
-            <li className="btn teach-btn">
+            </Link>
+            <Link className="btn teach-btn">
               <FaChartLine /> Exam Results
-            </li>
-            <li className="btn teach-btn">
+            </Link>
+            <Link className="btn teach-btn">
               <FaBell /> Notifications
-            </li>
-            <li className="btn teach-btn">
+            </Link>
+            <Link className="btn teach-btn">
               <FaRegCalendarAlt /> Attendance
-            </li>
-            <li className="btn teach-btn">
+            </Link>
+            <Link className="btn teach-btn">
               <FaMoneyBillWave /> Fees & Payments
-            </li>
-            <li className="btn teach-btn">
+            </Link>
+            <Link className="btn teach-btn">
               <FaCogs /> Settings
-            </li>
-            <li onClick={handleLogout} className="btn teach-btn">
+            </Link>
+            <Link onClick={handleLogout} className="btn teach-btn">
               <FaSignOutAlt /> Logout
-            </li>
+            </Link>
           </ul>
         </nav>
       </div>
@@ -71,10 +91,28 @@ const Studentdash = () => {
       {/* Main Content Area */}
       <main className="dashboard-main">
         <header>
-          <h2 className="title text-dark">Welcome, {studentName} 🎉</h2>
+          <h2 className="title text-dark">
+            Welcome, {studentData?.name || "Student"} 🎉
+          </h2>
           <p>Track your courses, assignments, and more!</p>
         </header>
-
+        {/* 🔥 Profile Section */}
+        <div className="profile-info">
+          {studentData?.passportURL ? (
+            <img
+              src={studentData.passportURL}
+              alt="Profile"
+              className="profile-pic"
+            />
+          ) : (
+            <p>No profile picture</p>
+          )}
+          <h3>{studentData?.name || user?.email || "Student"}</h3>
+          <p>Class: {studentData?.class || "Not set"}</p>
+          <p>Age: {studentData?.age || "Not set"}</p>
+          <p>Phone: {studentData?.phone || "Not set"}</p>
+          <p>Address: {studentData?.address || "Not set"}</p>
+        </div>
         {/* Quick Stats Section */}
         <div className="dashboard-cards">
           <div className="card">

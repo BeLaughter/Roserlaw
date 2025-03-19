@@ -18,7 +18,7 @@ import Register from "./Pages/Register";
 import PrivateRoute from "./PrivateRoute";
 import Login from "./Pages/Login";
 import Dashboard from "./Pages/Dashboard";
-
+import Update from "./Components/Update";
 function App() {
   // Initialize AOS animations
   useEffect(() => {
@@ -74,13 +74,20 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
 
-
         {/* Private Routes (Only for Logged-In Users) */}
         <Route
           path="/dashboard"
           element={
             <PrivateRoute>
               <Dashboard />
+            </PrivateRoute>
+          }
+        />
+        <Route
+          path="/update"
+          element={
+            <PrivateRoute>
+              <Update />
             </PrivateRoute>
           }
         />
