@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { auth } from "../firebase";
+import { doc, updateDoc } from "firebase/firestore"; // ✅ Import Firestore methods
+import { auth, db } from "../firebase"; // ✅ Ensure you import `db` (Firestore)
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -25,16 +26,18 @@ const Login = () => {
       await user.reload();
 
       if (!user.emailVerified) {
-        await signOut(auth);
-        throw new Error("Email not verified. Please check your inbox.");
+        setError("Email not verified. Please check your inbox.");
+        return; // ✅ Stops further execution instead of signing out
       }
 
-      // 🔥 Update Firestore to reflect that email is verified
+      // ✅ Update Firestore to reflect email is verified (only if it was previously false)
       const userDocRef = doc(db, "users", user.uid);
       await updateDoc(userDocRef, { emailVerified: true });
 
-      navigate("/dashboard"); // Redirect after successful login
+      // ✅ Redirect after successful login
+      navigate("/dashboard");
     } catch (err) {
+      console.error("Login Error:", err.code, err.message); // ✅ Logs the exact Firebase error
       if (err.code === "auth/user-not-found") {
         setError("No account found with this email.");
       } else if (err.code === "auth/wrong-password") {
