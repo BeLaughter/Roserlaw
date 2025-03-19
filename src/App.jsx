@@ -14,7 +14,7 @@ import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import Regteach from "./Pages/Regteach";
 import Register from "./Pages/Register";
-import Mistake from "./Components/Mistake";
+import Mistake from "./Pages/Mistake";
 // Import Auth & Private Pages
 import PrivateRoute from "./PrivateRoute";
 import Login from "./Pages/Login";

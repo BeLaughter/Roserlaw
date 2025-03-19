@@ -1,7 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Mistake = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    setTimeout(() => {
+      navigate("/");
+    }, 5000); // Redirects to home after 10 seconds
+  }, [navigate]);
+
   return (
     <div className="text-center mt-5 mb-5">
       <div class="tv-container">
