@@ -72,7 +72,7 @@ function Body() {
                 <a className="btn caroa" href="#learn">
                   Learn More
                 </a>
-                <a className="btn caroa" href="#">
+                <a className="btn caroa" href="#classes">
                   Our Classes
                 </a>
               </div>

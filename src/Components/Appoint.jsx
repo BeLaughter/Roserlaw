@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { db } from "../firebase"; // Import Firestore database
+import { db } from "../../src/firebase"; // Import Firestore database
 import { collection, addDoc } from "firebase/firestore";
 import "./Appoint.css";
 

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { useAuth } from "../AuthContext"; // Authentication Context
+import { useAuth } from "../../src/AuthContext"; // Authentication Context
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import { db } from "../firebase";
+import { db } from "../../src/firebase";
 import { doc, getDoc } from "firebase/firestore";
 import {
   FaBook,

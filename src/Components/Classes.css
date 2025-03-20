@@ -1,0 +1,105 @@
+/* 📱 Mobile Styles (max-width: 768px) */
+@media (max-width: 768px) {
+  .classes {
+    padding: 20px;
+  }
+}
+
+/* 💻 Larger Screens (min-width: 769px) */
+@media (min-width: 769px) {
+  .classes {
+    padding: 100px;
+    padding-top: 50px !important;
+  }
+}
+
+/* 🎨 Global Styling */
+.classes {
+  color: rgb(14, 13, 13) !important;
+  background-color: white;
+}
+
+/* 📦 Class Container */
+.class-con {
+  width: 400px;
+  height: 450px;
+  background-color: white;
+  color: white !important;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  transition: transform 0.4s ease-in-out;
+}
+.class-con:hover {
+  transform: translateY(-20px);
+}
+
+/* 🟢 Circle */
+.class-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: green;
+  width: 240px; /* Fixed size instead of vw */
+  height: 240px;
+  border-radius: 50%;
+  object-fit: contain;
+  z-index: 2;
+}
+.class-img {
+  width: 210px; /* Fixed size instead of vw */
+  height: 210px;
+  border-radius: 50%;
+}
+
+/* 🟩 Rectangle */
+.rectangle {
+  width: 360px;
+  height: 250px;
+  padding: 20px;
+  border-radius: 20px;
+  bottom: 0;
+  background-color: green;
+  position: absolute;
+}
+
+/* 🔀 Flex Helpers */
+.jt {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* 🔘 Button */
+.clbtn {
+  width: 80px;
+  height: 30px;
+  padding: 5px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+}
+.av2 {
+  font-weight: bold;
+  font-family: sans-serif;
+}
+.age {
+  border-top: 3px solid aqua;
+}
+.time {
+  border-top: 3px solid rgb(255, 8, 0);
+}
+.capacity {
+  border-top: 3px solid rgb(238, 255, 0);
+}
