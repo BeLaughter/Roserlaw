@@ -67,7 +67,7 @@
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
-  transition: transform 0.4s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 .class-con:hover {
   transform: translateY(-20px);
@@ -77,6 +77,9 @@
 }
 .class-con:hover .rectangle {
   background-color: rgb(4, 185, 4);
+}
+.class-con:hover .class-img {
+  transform: scale(1.1);
 }
 
 /* 🟢 Circle */
@@ -101,6 +104,7 @@
   width: 210px; /* Fixed size instead of vw */
   height: 210px;
   border-radius: 50%;
+  transition: transform 1s ease-in-out;
 }
 .link {
   text-decoration: none;
