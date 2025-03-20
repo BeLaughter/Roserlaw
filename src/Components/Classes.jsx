@@ -19,7 +19,7 @@ const Classes = () => {
           fees="#50000"
           age="4-6 years"
           time="7:00am-3:00pm"
-          capacity="100pupils"
+          capacity="100 pupils"
         />
         <Classcard
           img={kid}
@@ -29,7 +29,7 @@ const Classes = () => {
           fees="#60000"
           age="5-7 years"
           time="7:00am-3:00pm"
-          capacity="100pupils"
+          capacity="100 pupils"
         />
         <Classcard
           img={kid}
@@ -39,7 +39,7 @@ const Classes = () => {
           fees="#65000"
           age="6-8 years"
           time="7:00am-3:00pm"
-          capacity="100pupils"
+          capacity="100 pupils"
         />
       </div>
       <div className="flex-con">
@@ -51,7 +51,7 @@ const Classes = () => {
           fees="#75000"
           age="7-9 years"
           time="7:00am-3:00pm"
-          capacity="100pupils"
+          capacity="100 pupils"
         />
         <Classcard
           img={kid}
@@ -61,7 +61,7 @@ const Classes = () => {
           fees="#85000"
           age="8-10 years"
           time="7:00am-3:00pm"
-          capacity="100pupils"
+          capacity="100 pupils"
         />
         <Classcard
           img={kid}
@@ -71,7 +71,7 @@ const Classes = () => {
           fees="#100000"
           age="9-11 years"
           time="7:00am-3:00pm"
-          capacity="100pupils"
+          capacity="100 pupils"
         />
       </div>
     </div>
