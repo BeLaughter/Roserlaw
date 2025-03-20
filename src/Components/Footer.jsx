@@ -19,7 +19,14 @@ import child3 from "../assets/child3.jpg";
 import child4 from "../assets/child4.jpg";
 import child5 from "../assets/child5.jpg";
 import child6 from "../assets/child6.jpg";
+import { useNavigate } from "react-router-dom";
+
 function Footer() {
+  const navigate = useNavigate(); // Initialize navigation
+
+  const goToGallery = () => {
+    navigate("/gallery"); // Navigate to /gallery
+  };
   return (
     <div className="footer">
       <div className="flex-container6">
@@ -68,25 +75,27 @@ function Footer() {
           </ul>
         </div>
         <div className="flex-item">
-          <Link to="/gallery">
-            <h4>Photo Gallery</h4>
-          </Link>
+          <h4 onClick={goToGallery}>Photo Gallery </h4>
+
           <ul>
             <li>
               <div className="flen">
                 <img
                   src={child1}
                   alt="Testimonial Image"
+                  onClick={goToGallery}
                   className="gallery-img"
                 />
                 <img
                   src={child2}
                   alt="Testimonial Image"
+                  onClick={goToGallery}
                   className="gallery-img"
                 />
                 <img
                   src={child3}
                   alt="Testimonial Image"
+                  onClick={goToGallery}
                   className="gallery-img"
                 />
               </div>
@@ -96,16 +105,19 @@ function Footer() {
                 <img
                   src={child4}
                   alt="Testimonial Image"
+                  onClick={goToGallery}
                   className="gallery-img"
                 />
                 <img
                   src={child5}
                   alt="Testimonial Image"
+                  onClick={goToGallery}
                   className="gallery-img"
                 />
                 <img
                   src={child6}
                   alt="Testimonial Image"
+                  onClick={goToGallery}
                   className="gallery-img"
                 />
               </div>

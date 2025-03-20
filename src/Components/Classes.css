@@ -102,7 +102,9 @@
   height: 210px;
   border-radius: 50%;
 }
-
+.link {
+  text-decoration: none;
+}
 /* 🟩 Rectangle */
 .rectangle {
   width: 360px;
