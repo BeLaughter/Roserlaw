@@ -26,7 +26,7 @@
     width: 250px; /* Adjust for big circle */
     height: 250px;
     border-radius: 50%;
-    background-color: rgb(178, 240, 178);
+    background-color: green;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -108,7 +108,7 @@
     width: 350px; /* Adjust for big circle */
     height: 350px;
     border-radius: 50%;
-    background-color: rgb(178, 240, 178);
+    background-color: green;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -186,7 +186,7 @@
 
 /* Hover effect */
 .circle:hover {
-  background-color: green;
+  background-color: rgb(4, 185, 4);
 }
 .circle:hover img {
   transform: scale(1.5); /* Zoom effect on hover */
