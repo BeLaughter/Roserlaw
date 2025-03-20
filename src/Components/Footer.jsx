@@ -1,5 +1,6 @@
 // import { useState } from "react";
 import "./Footer.css";
+import { Link } from "react-router-dom";
 import {
   FaPhone,
   FaInstagram,
@@ -67,7 +68,9 @@ function Footer() {
           </ul>
         </div>
         <div className="flex-item">
-          <h4>Photo Gallery</h4>
+          <Link to="/gallery">
+            <h4>Photo Gallery</h4>
+          </Link>
           <ul>
             <li>
               <div className="flen">

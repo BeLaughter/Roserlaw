@@ -6,8 +6,9 @@ import Teach from "../Components/Teach";
 import Appoint from "../Components/Appoint";
 import Pop from "../Components/Pop";
 import Testi from "../Components/Testi";
-import Dashboard from "./Dashboard";
 import Classes from "../Components/Classes";
+import Gallery from "./Gallery";
+
 const Home = () => {
   return (
     <div>
@@ -15,7 +16,7 @@ const Home = () => {
       <Facility />
       <Aboutus />
       <Teach />
-      <Classes/>
+      <Classes />
       <Appoint />
       <Pop />
       <Testi />

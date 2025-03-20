@@ -3,6 +3,21 @@
   .classes {
     padding: 20px;
   }
+  .gallery {
+    padding: 20px;
+  }
+  .custom-gallery .image-gallery-slide img {
+    width: 100% !important;
+    height: 400px !important; /* Set uniform height */
+    object-fit: contain; /* Maintain aspect ratio and fill */
+  }
+
+  /* Set same size for thumbnails */
+  .custom-gallery .image-gallery-thumbnail img {
+    width: 80px !important;
+    height: 60px !important;
+    object-fit: cover; /* Ensure thumbnails look uniform */
+  }
 }
 
 /* 💻 Larger Screens (min-width: 769px) */
@@ -11,10 +26,30 @@
     padding: 100px;
     padding-top: 50px !important;
   }
+  .gallery {
+    padding: 100px;
+    padding-top: 50px !important;
+  }
+  .custom-gallery .image-gallery-slide img {
+    width: 100% !important;
+    height: 400px !important; /* Set uniform height */
+    object-fit: contain; /* Maintain aspect ratio and fill */
+  }
+
+  /* Set same size for thumbnails */
+  .custom-gallery .image-gallery-thumbnail img {
+    width: 80px !important;
+    height: 60px !important;
+    object-fit: cover; /* Ensure thumbnails look uniform */
+  }
 }
 
 /* 🎨 Global Styling */
 .classes {
+  color: rgb(14, 13, 13) !important;
+  background-color: white;
+}
+.gallery {
   color: rgb(14, 13, 13) !important;
   background-color: white;
 }
@@ -36,6 +71,12 @@
 }
 .class-con:hover {
   transform: translateY(-20px);
+}
+.class-con:hover .class-circle {
+  background-color: rgb(4, 185, 4);
+}
+.class-con:hover .rectangle {
+  background-color: rgb(4, 185, 4);
 }
 
 /* 🟢 Circle */

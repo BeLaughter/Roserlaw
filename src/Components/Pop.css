@@ -44,7 +44,7 @@
   height: 75vh;
   border-radius: 50%;
   padding: 10px;
-  background-color: rgb(133, 197, 133);
+  background-color: green;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -52,12 +52,12 @@
 
 /* Hover Effect */
 .big-cir:hover {
-  background-color: green;
+  background-color: rgb(4, 185, 4);
 }
 
 .big-cir:hover .small-cir {
   color: white !important;
-  background-color: green !important;
+  background-color: rgb(4, 185, 4) !important;
 }
 
 /* Image inside Big Circle */
@@ -78,8 +78,7 @@
   position: absolute;
   bottom: -0%;
   right: -40%;
-  background-color: rgb(133, 197, 133);
-  border: 2px solid black;
+  background-color: green;
   width: 15vw;
   height: 15vw;
   border-radius: 50%;

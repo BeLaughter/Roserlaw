@@ -15,6 +15,7 @@ import Footer from "./Components/Footer";
 import Regteach from "./Pages/Regteach";
 import Register from "./Pages/Register";
 import Mistake from "./Pages/Mistake";
+import Gallery from "./Pages/Gallery";
 // Import Auth & Private Pages
 import PrivateRoute from "./PrivateRoute";
 import Login from "./Pages/Login";
@@ -74,6 +75,7 @@ function App() {
         <Route path="/regteach" element={<Regteach />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/gallery" element={<Gallery />} />
         <Route path="*" element={<Mistake />} /> {/* Catch-all 404 route */}
         {/* Private Routes (Only for Logged-In Users) */}
         <Route
