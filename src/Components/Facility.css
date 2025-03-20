@@ -37,9 +37,21 @@ h3 {
   align-items: center;
   justify-content: center;
   text-align: center;
+  transition: transform 0.5s ease-in-out;
   margin: 20px;
 }
-
+.facility-item:hover {
+  transform: translateY(-20px);
+}
+.facility-item:hover .facility-icon {
+  background-color: rgb(4, 185, 4);
+}
+.facility-item:hover .facility-icon span {
+  background-color: rgb(4, 185, 4);
+}
+.facility-item:hover .facility-text {
+  background-color: rgb(4, 185, 4);
+}
 .facility-item .facility-icon {
   position: relative;
   width: 110px;
@@ -48,7 +60,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #2ecc71;
+  background: green;
 }
 
 .facility-item .facility-icon::before {
@@ -68,7 +80,7 @@ h3 {
   width: 15px;
   height: 30px;
   top: -3px;
-  background: #2ecc71;
+  background: green;
   border-radius: 50%;
 }
 
@@ -94,7 +106,7 @@ h3 {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: #2ecc71;
+  background: green;
   color: white;
   margin-top: -20px;
 }
