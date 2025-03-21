@@ -4,8 +4,16 @@ import director2 from "../assets/director2.jpg";
 import child1 from "../assets/child1.jpg";
 import child2 from "../assets/child2.jpg";
 import child3 from "../assets/child3.jpg";
+import { useNavigate } from "react-router-dom";
 
 const Aboutus = () => {
+  //navigate to gallery
+  const navigate = useNavigate(); // Initialize navigation
+
+  const goToGallery = () => {
+    navigate("/gallery"); // Navigate to /gallery
+  };
+
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
@@ -52,15 +60,18 @@ const Aboutus = () => {
         </div>
       </div>
       <div className="flex4">
+        <a className="btn about-btn" onClick={goToGallery}>
+          Go To Gallery
+        </a>
         <div className="circle-container">
           <div className="circle big-circle">
-            <img src={child1} alt="Big Circle" />
+            <img src={child1} alt="Big Circle" onClick={goToGallery} />
           </div>
           <div className="circle small-circle left">
-            <img src={child2} alt="Left Circle" />
+            <img src={child2} alt="Left Circle" onClick={goToGallery} />
           </div>
           <div className="circle small-circle right">
-            <img src={child3} alt="Right Circle" />
+            <img src={child3} alt="Right Circle" onClick={goToGallery} />
           </div>
         </div>
       </div>

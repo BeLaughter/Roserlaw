@@ -43,7 +43,7 @@ const Appoint = () => {
   };
 
   return (
-    <div className="appoint flex-contain">
+    <div className="appoint flex-contain" id="appoint">
       <div className="flex1">
         <h2 className="title text-dark">Make Appointment</h2>
         <form onSubmit={handleSubmit}>

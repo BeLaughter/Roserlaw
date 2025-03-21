@@ -138,7 +138,7 @@ function Footer() {
       </div>
       <hr></hr>
       <div className="flex-container6">
-        <p>121 S. Apebi St. Ijebu-ode,Ogun State</p>
+        <p>121, Apebi St. Ijebu-ode,Ogun State</p>
         <p>© ROSERLAW 2025. All Rights Reserved. Design by BlackFire</p>
       </div>
     </div>

@@ -79,49 +79,49 @@ function Navbar() {
               {dropdownOpen && (
                 <ul className="dropdown-menu show">
                   <li>
-                    <a
-                      href="/page/1"
+                    <Link
+                      to="/"
                       className="dropdown-item"
                       onClick={closeNavbar}
                     >
                       School Facilities
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="/page/2"
+                    <Link
+                      to="/"
                       className="dropdown-item"
                       onClick={closeNavbar}
                     >
                       Popular Teachers
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="/page/3"
+                    <Link
+                      to="/regteach"
                       className="dropdown-item"
                       onClick={closeNavbar}
                     >
                       Become A Teacher
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="/page/4"
+                    <Link
+                      to="/"
                       className="dropdown-item"
                       onClick={closeNavbar}
                     >
                       Make Appointment
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
-                      href="/page/5"
+                    <Link
+                      to="/"
                       className="dropdown-item"
                       onClick={closeNavbar}
                     >
                       Testimonial
-                    </a>
+                    </Link>
                   </li>
                 </ul>
               )}
