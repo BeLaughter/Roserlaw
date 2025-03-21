@@ -7,7 +7,7 @@ import { BsPersonWorkspace } from "react-icons/bs";
 const Facility = () => {
   return (
     <div className="facility">
-      <h2 className="text-center title text-dark">School Facilities</h2>
+      <h2 className="text-center title text-dark mb-5">School Facilities</h2>
       <div className="flex-container">
         <div className="item">
           <div class="facility-item">

@@ -19,7 +19,7 @@ const Aboutus = () => {
   return (
     <div className="flex-container aboutus" id="learn">
       <div className="flex1">
-        <h2 className="title text-dark">
+        <h2 className="title text-dark ">
           Learn More About Our Work And Our Cultural Activities
         </h2>
         <p>

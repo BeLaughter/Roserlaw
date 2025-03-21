@@ -7,7 +7,7 @@ const Classes = () => {
   return (
     <div className="classes" id="classes">
       <h1 className="text-dark title text-center">School Classes</h1>
-      <p className="text-center">
+      <p className="text-center mb-4">
         Our classes empowers students to excel academically and personally.
       </p>
       <div className="flex-con">
