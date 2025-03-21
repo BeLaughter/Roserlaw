@@ -60,7 +60,9 @@ const Gallery = () => {
   return (
     <div className="gallery">
       <h1 className="text-dark title text-center">School Gallery</h1>
-      <p className="text-center">Our Gallery with memories of our students.</p>
+      <p className="text-center">
+        Our Gallery with memories of our students & teachers.
+      </p>
       <ImageGallery items={images} additionalClass="custom-gallery" />
       <p className="text-center ptop">
         Return to home <Link to="/">HOME</Link>
